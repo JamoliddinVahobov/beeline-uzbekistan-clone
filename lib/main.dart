@@ -2,7 +2,9 @@
 
 import 'package:beeline_uzbekistan_clone/balans_va_qoldiqlar.dart';
 import 'package:beeline_uzbekistan_clone/number.dart';
+import 'package:beeline_uzbekistan_clone/ommabop_containers.dart';
 import 'package:beeline_uzbekistan_clone/promotions.dart';
+import 'package:beeline_uzbekistan_clone/thelist';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +16,11 @@ void main() {
     ),
   );
 }
+
+final normal = TextStyle(
+  fontWeight: FontWeight.w500,
+  fontSize: 14,
+);
 
 final still = TextStyle(
   color: Colors.black,
@@ -147,42 +154,42 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Expanded(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                height: 640,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      Colors.white,
-                      Colors.white,
-                      Colors.blue,
-                      Colors.white,
-                      Colors.orange,
-                      Colors.orange,
-                    ],
-                    begin: Alignment.bottomCenter,
-                    end: Alignment.topRight,
-                  ),
-                ),
-                child: Expanded(
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Promotions(),
-                        BalansAndTarif(),
-                      ],
-                    ),
-                  ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              height: 530,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Colors.white,
+                    Colors.white,
+                    Colors.blue,
+                    Colors.white,
+                    Colors.orange,
+                    Colors.orange,
+                  ],
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topRight,
                 ),
               ),
-            ],
-          ),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Promotions(),
+                    BalansAndTarif(),
+                  ],
+                ),
+              ),
+            ),
+            Ommabop(),
+            TheList(),
+            SizedBox(height: 20),
+          ],
         ),
       ),
     );

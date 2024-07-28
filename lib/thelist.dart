@@ -5,6 +5,7 @@ final still = TextStyle(
   color: Colors.black,
   fontSize: 17,
 );
+
 class TheList extends StatefulWidget {
   const TheList({super.key});
 
@@ -101,4 +102,3 @@ class TheListState extends State<TheList> {
     );
   }
 }
-

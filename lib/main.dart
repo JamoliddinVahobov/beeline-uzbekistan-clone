@@ -1,10 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:beeline_uzbekistan_clone/balans_va_qoldiqlar.dart';
+import 'package:beeline_uzbekistan_clone/beees_class.dart';
 import 'package:beeline_uzbekistan_clone/number.dart';
 import 'package:beeline_uzbekistan_clone/ommabop_containers.dart';
 import 'package:beeline_uzbekistan_clone/promotions.dart';
-import 'package:beeline_uzbekistan_clone/thelist';
+import 'package:beeline_uzbekistan_clone/thelist.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -188,6 +189,7 @@ class HomeScreen extends StatelessWidget {
             ),
             Ommabop(),
             TheList(),
+            Bees(),
             SizedBox(height: 20),
           ],
         ),

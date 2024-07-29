@@ -20,19 +20,18 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 width: 50,
                 height: 50,
                 decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      "assets/handy.jpg",
+                    ),
+                    fit: BoxFit.cover,
+                  ),
                   shape: BoxShape.circle,
                   border: Border.all(
                     color: Colors.blue,
                     width: 2,
                   ),
                   color: Colors.transparent,
-                ),
-                child: Center(
-                  child: Icon(
-                    Icons.thumb_up,
-                    color: Colors.orange,
-                    size: 30,
-                  ),
                 ),
               ),
               SizedBox(width: 10),
@@ -92,7 +91,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight + 20);
+  Size get preferredSize => Size.fromHeight(kToolbarHeight + 40);
 }
 
 class CustomSnackbarContent extends StatelessWidget {
@@ -123,12 +122,14 @@ class CustomSnackbarContent extends StatelessWidget {
                 Row(
                   children: [
                     CircleAvatar(
-                      radius: 25,
-                      backgroundColor: Colors.yellow.shade200,
-                      child: Icon(
-                        Icons.thumb_up,
-                        color: Colors.orange,
-                        size: 30,
+                      radius: 27,
+                      backgroundColor: Colors.blue,
+                      child: CircleAvatar(
+                        radius: 25,
+                        backgroundColor: Colors.yellow.shade200,
+                        backgroundImage: AssetImage(
+                          "assets/handy.jpg",
+                        ),
                       ),
                     ),
                     SizedBox(width: 10),

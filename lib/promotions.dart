@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class Promotions extends StatefulWidget {
   const Promotions({super.key});
@@ -27,61 +28,56 @@ class PromotionsState extends State<Promotions> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          SizedBox(width: 12),
-          ...promotionUrls.map((url) => PromotionItem(imageUrl: url)),
-          SizedBox(width: 10),
-        ],
-      ),
-    );
-  }
-}
-
-class PromotionItem extends StatefulWidget {
-  final String imageUrl;
-  const PromotionItem({
-    super.key,
-    required this.imageUrl,
-  });
-
-  @override
-  PromotionItemState createState() => PromotionItemState();
-}
-
-class PromotionItemState extends State<PromotionItem> {
-  bool _isHighlighted = false;
-
-  void _toggleHighlight() {
-    setState(() {
-      _isHighlighted = !_isHighlighted;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: _toggleHighlight,
-      child: Container(
-        margin: EdgeInsets.only(right: 8),
-        height: 130,
-        width: 105,
-        decoration: BoxDecoration(
-          border: Border.all(
-            color: Colors.blue.shade700,
-            width: 3,
-          ),
-          borderRadius: BorderRadius.circular(20),
-          image: DecorationImage(
-            image: AssetImage(
-              widget.imageUrl,
+    return Row(
+      children: [
+        SizedBox(
+          width: 10,
+        ),
+        Expanded(
+          child: SizedBox(
+            height: 150,
+            width: double.infinity,
+            child: CarouselSlider(
+              items: promotionUrls
+                  .map(
+                    (url) => Padding(
+                      padding: const EdgeInsets.only(right: 8),
+                      child: Container(
+                        height: 120,
+                        width: 120,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.blue.shade700,
+                            width: 3,
+                          ),
+                          image: DecorationImage(
+                            image: AssetImage(
+                              url,
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
+                    ),
+                  )
+                  .toList(),
+              options: CarouselOptions(
+                padEnds: false,
+                pauseAutoPlayOnTouch: true,
+                pageSnapping: false,
+                enableInfiniteScroll: false,
+                viewportFraction: 0.3,
+                autoPlay: true,
+                autoPlayInterval: Duration(seconds: 5),
+              ),
+              // SizedBox(width: 12),
+              // ...promotionUrls.map((url) => PromotionItem(imageUrl: url)).toList,
+              // SizedBox(width: 10),
             ),
-            fit: BoxFit.cover,
           ),
         ),
-      ),
+      ],
     );
   }
 }

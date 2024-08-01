@@ -101,91 +101,107 @@ class CustomSnackbarContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 160,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(15),
-          topRight: Radius.circular(15),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        Container(
+          height: 6.5,
+          width: 80,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(8),
+          ),
         ),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 15),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Row(
+        SizedBox(
+          height: 9,
+        ),
+        Container(
+          height: 160,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(15),
+              topRight: Radius.circular(15),
+            ),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    CircleAvatar(
-                      radius: 27,
-                      backgroundColor: Colors.blue,
-                      child: CircleAvatar(
-                        radius: 25,
-                        backgroundColor: Colors.yellow.shade200,
-                        backgroundImage: AssetImage(
-                          "assets/handy.jpg",
-                        ),
-                      ),
-                    ),
-                    SizedBox(width: 10),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
+                    Row(
                       children: [
-                        Row(
-                          children: [
-                            Text(
-                              'yuklanmoqda...',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.green,
-                              ),
+                        CircleAvatar(
+                          radius: 27,
+                          backgroundColor: Colors.blue,
+                          child: CircleAvatar(
+                            radius: 25,
+                            backgroundColor: Colors.yellow.shade200,
+                            backgroundImage: AssetImage(
+                              "assets/handy.jpg",
                             ),
-                            Icon(
-                              Icons.check,
-                              color: Colors.green,
+                          ),
+                        ),
+                        SizedBox(width: 10),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Row(
+                              children: [
+                                Text(
+                                  'yuklanmoqda...',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.green,
+                                  ),
+                                ),
+                                Icon(
+                                  Icons.check,
+                                  color: Colors.green,
+                                ),
+                              ],
+                            ),
+                            Text(
+                              '90 570-89-23',
+                              style: TextStyle(
+                                fontSize: 16,
+                              ),
                             ),
                           ],
                         ),
-                        Text(
-                          '90 570-89-23',
-                          style: TextStyle(
-                            fontSize: 16,
-                          ),
-                        ),
                       ],
+                    ),
+                    SizedBox(width: 5),
+                    Text(
+                      "1 001 so'm",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ],
                 ),
-                SizedBox(width: 5),
-                Text(
-                  "1 001 so'm",
+              ),
+              TextButton(
+                onPressed: onTap,
+                child: Text(
+                  "Qo'shish",
                   style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                  ),
+                      color: Colors.blue[700],
+                      fontWeight: FontWeight.w700,
+                      fontSize: 17),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
-          TextButton(
-            onPressed: onTap,
-            child: Text(
-              "Qo'shish",
-              style: TextStyle(
-                  color: Colors.blue[700],
-                  fontWeight: FontWeight.w700,
-                  fontSize: 17),
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

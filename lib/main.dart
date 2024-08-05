@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_const_declarations
 import 'package:beeline_uzbekistan_clone/home_screen.dart';
 import 'package:beeline_uzbekistan_clone/kongilochar.dart';
+import 'package:beeline_uzbekistan_clone/moliyalar.dart';
 import 'package:beeline_uzbekistan_clone/number.dart';
 import 'package:beeline_uzbekistan_clone/tariflar_controller.dart';
 import 'package:beeline_uzbekistan_clone/xarajatlar.dart';
@@ -85,7 +86,7 @@ class _BeelineState extends State<Beeline> {
               Xarajatlar(),
               Tariflar(),
               Kongilochar(),
-              Center(child: Text('Screen 5')),
+              Moliyalar(),
             ],
           ),
           if (_showSnackbar)

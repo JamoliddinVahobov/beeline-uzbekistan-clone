@@ -66,7 +66,7 @@ class PromotionsState extends State<Promotions> {
                 padEnds: false,
                 pauseAutoPlayOnTouch: true,
                 pageSnapping: false,
-                enableInfiniteScroll: false,
+                enableInfiniteScroll: true,
                 viewportFraction: 0.3,
                 autoPlay: true,
                 autoPlayInterval: Duration(seconds: 5),

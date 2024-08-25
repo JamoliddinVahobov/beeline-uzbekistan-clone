@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
 import 'package:glass/glass.dart';
 
@@ -26,7 +25,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 width: 50,
                 height: 50,
                 decoration: BoxDecoration(
-                  image: DecorationImage(
+                  image: const DecorationImage(
                     image: AssetImage("assets/handy.jpg"),
                     fit: BoxFit.cover,
                   ),
@@ -38,8 +37,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   color: Colors.transparent,
                 ),
               ),
-              SizedBox(width: 10),
-              Expanded(
+              const SizedBox(width: 10),
+              const Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
@@ -68,19 +67,19 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   ],
                 ),
               ),
-              SizedBox(width: 5),
+              const SizedBox(width: 5),
               Row(
                 children: [
                   IconButton(
-                    icon: Icon(Icons.settings_outlined),
+                    icon: const Icon(Icons.settings_outlined),
                     onPressed: () {},
                   ),
                   IconButton(
-                    icon: Icon(Icons.headset_outlined),
+                    icon: const Icon(Icons.headset_outlined),
                     onPressed: () {},
                   ),
                   IconButton(
-                    icon: Icon(Icons.notifications_outlined),
+                    icon: const Icon(Icons.notifications_outlined),
                     onPressed: () {},
                   ),
                 ],
@@ -118,12 +117,12 @@ class CustomSnackbarContent extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 9,
         ),
         Container(
           height: 160,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(15),
@@ -147,13 +146,13 @@ class CustomSnackbarContent extends StatelessWidget {
                           child: CircleAvatar(
                             radius: 25,
                             backgroundColor: Colors.yellow.shade200,
-                            backgroundImage: AssetImage(
+                            backgroundImage: const AssetImage(
                               "assets/handy.jpg",
                             ),
                           ),
                         ),
-                        SizedBox(width: 10),
-                        Column(
+                        const SizedBox(width: 10),
+                        const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisSize: MainAxisSize.min,
                           children: [
@@ -183,8 +182,8 @@ class CustomSnackbarContent extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(width: 5),
-                    Text(
+                    const SizedBox(width: 5),
+                    const Text(
                       "1 001 so'm",
                       style: TextStyle(
                         fontSize: 16,

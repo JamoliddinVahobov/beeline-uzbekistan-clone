@@ -1,8 +1,6 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 
-final normal = TextStyle(
+const normal = TextStyle(
   fontWeight: FontWeight.w500,
   fontSize: 14,
 );
@@ -47,7 +45,7 @@ class _OmmabopState extends State<Ommabop> {
                         width: 0.5,
                       ),
                       borderRadius: BorderRadius.circular(25),
-                      image: DecorationImage(
+                      image: const DecorationImage(
                         image: AssetImage(
                           "assets/int.jpg",
                         ),
@@ -55,10 +53,10 @@ class _OmmabopState extends State<Ommabop> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 3,
                   ),
-                  Text(
+                  const Text(
                     "Internet-paketlar",
                     style: normal,
                   ),
@@ -78,7 +76,7 @@ class _OmmabopState extends State<Ommabop> {
                         width: 01,
                       ),
                       borderRadius: BorderRadius.circular(12),
-                      image: DecorationImage(
+                      image: const DecorationImage(
                         image: AssetImage(
                           "assets/cheg.jpg",
                         ),
@@ -87,7 +85,7 @@ class _OmmabopState extends State<Ommabop> {
                     ),
                   ),
                 ),
-                Text(
+                const Text(
                   "Chegirmalar",
                   style: normal,
                 ),
@@ -106,7 +104,7 @@ class _OmmabopState extends State<Ommabop> {
                                 width: 01,
                               ),
                               borderRadius: BorderRadius.circular(12),
-                              image: DecorationImage(
+                              image: const DecorationImage(
                                 image: AssetImage(
                                   "assets/tar.jpg",
                                 ),
@@ -114,10 +112,10 @@ class _OmmabopState extends State<Ommabop> {
                               ),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 3,
                           ),
-                          Text(
+                          const Text(
                             "Tariflar",
                             style: normal,
                           ),
@@ -135,7 +133,7 @@ class _OmmabopState extends State<Ommabop> {
                             decoration: BoxDecoration(
                               color: Colors.orange,
                               borderRadius: BorderRadius.circular(12),
-                              image: DecorationImage(
+                              image: const DecorationImage(
                                 image: AssetImage(
                                   "assets/beeclub.png",
                                 ),
@@ -143,10 +141,10 @@ class _OmmabopState extends State<Ommabop> {
                               ),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 3,
                           ),
-                          Text(
+                          const Text(
                             "BeeClub",
                             style: normal,
                           ),
@@ -159,7 +157,7 @@ class _OmmabopState extends State<Ommabop> {
             ),
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 13,
         ),
         Row(
@@ -178,7 +176,7 @@ class _OmmabopState extends State<Ommabop> {
                         width: 0.5,
                       ),
                       borderRadius: BorderRadius.circular(25),
-                      image: DecorationImage(
+                      image: const DecorationImage(
                         image: AssetImage(
                           "assets/yarma.png",
                         ),
@@ -186,10 +184,10 @@ class _OmmabopState extends State<Ommabop> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 3,
                   ),
-                  Text(
+                  const Text(
                     "Yarmarka",
                     style: normal,
                   ),
@@ -209,7 +207,7 @@ class _OmmabopState extends State<Ommabop> {
                         width: 01,
                       ),
                       borderRadius: BorderRadius.circular(12),
-                      image: DecorationImage(
+                      image: const DecorationImage(
                         image: AssetImage(
                           "assets/cheg.jpg",
                         ),
@@ -218,10 +216,10 @@ class _OmmabopState extends State<Ommabop> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 3,
                 ),
-                Text(
+                const Text(
                   "Chegirmalar",
                   style: normal,
                 ),

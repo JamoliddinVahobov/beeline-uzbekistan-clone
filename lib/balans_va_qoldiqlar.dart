@@ -1,12 +1,11 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
 
-final still = TextStyle(
+const still = TextStyle(
   color: Colors.black,
   fontSize: 17,
 );
 
-final cool = TextStyle(
+const cool = TextStyle(
   color: Colors.black,
   fontSize: 25,
   fontWeight: FontWeight.w900,
@@ -59,88 +58,90 @@ class _BalansAndTarifState extends State<BalansAndTarif> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        SizedBox(
-          height: 20,
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Expanded(
-              flex: 2,
-              child: Container(
-                height: 150,
-                width: 150,
-                margin: EdgeInsets.only(left: 10),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(width: 0.3, color: Colors.black),
-                  borderRadius: BorderRadius.circular(
-                    20,
-                  ),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 17,
-                        top: 10,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Balans',
-                            style: still,
-                          ),
-                          Text(
-                            '1 001',
-                            style: cool,
-                          ),
-                          Text(
-                            "so'm",
-                            style: pretty,
-                          ),
-                        ],
-                      ),
+    return Padding(
+      padding: const EdgeInsets.only(left: 5),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Expanded(
+                flex: 2,
+                child: Container(
+                  height: 150,
+                  width: 150,
+                  margin: const EdgeInsets.only(left: 10),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(width: 0.3, color: Colors.black),
+                    borderRadius: BorderRadius.circular(
+                      20,
                     ),
-                    InkWell(
-                      onTap: () {},
-                      child: Padding(
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
                         padding: const EdgeInsets.only(
-                          left: 13,
-                          top: 5,
-                          bottom: 5,
+                          left: 17,
+                          top: 10,
                         ),
-                        child: Container(
-                          height: 37,
-                          width: 120,
-                          margin: EdgeInsets.only(right: 10),
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                colors: [
-                                  Colors.black.withOpacity(0.7),
-                                  Colors.black,
-                                ]),
-                            borderRadius: BorderRadius.circular(30),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Balans',
+                              style: still,
+                            ),
+                            const Text(
+                              '1 001',
+                              style: cool,
+                            ),
+                            Text(
+                              "so'm",
+                              style: pretty,
+                            ),
+                          ],
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            left: 13,
+                            top: 5,
+                            bottom: 5,
                           ),
-                          child: Center(
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 5),
-                              child: FittedBox(
-                                child: Text(
-                                  "To'ldirish",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w500,
+                          child: Container(
+                            height: 37,
+                            width: 120,
+                            margin: const EdgeInsets.only(right: 10),
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                  colors: [
+                                    Colors.black.withOpacity(0.7),
+                                    Colors.black,
+                                  ]),
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            child: const Center(
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 5),
+                                child: FittedBox(
+                                  child: Text(
+                                    "To'ldirish",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w500,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -148,209 +149,147 @@ class _BalansAndTarifState extends State<BalansAndTarif> {
                           ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Expanded(
-              flex: 3,
-              child: Container(
-                height: 150,
-                width: 205,
-                margin: EdgeInsets.only(left: 7, right: 15),
-                decoration: BoxDecoration(
-                  border: Border.all(width: 0.3, color: Colors.black),
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 15,
-                        top: 12,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Tarif',
-                            style: still,
-                          ),
-                          Text(
-                            "MULTI 2 (30%)",
-                            style: TextStyle(
-                              fontSize: 20,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 3, bottom: 3),
-                      child: Divider(
-                        color: Colors.black,
-                        thickness: 0.5,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 15,
-                        // top: 12,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Keyingi to'lov",
-                            style: still,
-                          ),
-                          FittedBox(
-                            fit: BoxFit.scaleDown,
-                            child: Text(
-                              "26 avg, 35 000 so'm",
-                              style: TextStyle(
-                                fontSize: 19,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(
-              width: 1,
-            ),
-          ],
-        ),
-        SizedBox(
-          height: 12,
-        ),
-        Padding(
-          padding: const EdgeInsets.only(right: 5),
-          child: Container(
-            height: 155,
-            margin: EdgeInsets.symmetric(horizontal: 10),
-            decoration: BoxDecoration(
-              border: Border.all(width: 0.3, color: Colors.black),
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 20, top: 15),
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: info
-                          .map((information) => design(information))
-                          .toList(),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 5, bottom: 4),
-                  child: Divider(
-                    color: Colors.black,
-                    thickness: 0.5,
-                  ),
-                ),
-                InkWell(
-                  onTap: () {},
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Barcha qoldiqlarni ko'rish",
-                        style: still,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Icon(
-                        Icons.arrow_forward_ios,
-                        size: 15,
-                        color: Colors.black.withOpacity(0.6),
-                      ),
                     ],
                   ),
                 ),
-              ],
+              ),
+              Expanded(
+                flex: 3,
+                child: Container(
+                  height: 150,
+                  width: 205,
+                  margin: const EdgeInsets.only(left: 7, right: 15),
+                  decoration: BoxDecoration(
+                    border: Border.all(width: 0.3, color: Colors.black),
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(
+                          left: 15,
+                          top: 12,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Tarif',
+                              style: still,
+                            ),
+                            Text(
+                              "MULTI 2 (30%)",
+                              style: TextStyle(
+                                fontSize: 20,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 3, bottom: 3),
+                        child: Divider(
+                          color: Colors.black,
+                          thickness: 0.5,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                          left: 15,
+                          // top: 12,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Keyingi to'lov",
+                              style: still,
+                            ),
+                            FittedBox(
+                              fit: BoxFit.scaleDown,
+                              child: Text(
+                                "26 avg, 35 000 so'm",
+                                style: TextStyle(
+                                  fontSize: 19,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(
+                width: 1,
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 12,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 5),
+            child: Container(
+              height: 155,
+              margin: const EdgeInsets.symmetric(horizontal: 10),
+              decoration: BoxDecoration(
+                border: Border.all(width: 0.3, color: Colors.black),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20, top: 15),
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: info
+                            .map((information) => design(information))
+                            .toList(),
+                      ),
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 5, bottom: 4),
+                    child: Divider(
+                      color: Colors.black,
+                      thickness: 0.5,
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {},
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        const Text(
+                          "Barcha qoldiqlarni ko'rish",
+                          style: still,
+                        ),
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          size: 15,
+                          color: Colors.black.withOpacity(0.6),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
-
-        // Padding(
-        //   padding: const EdgeInsets.only(right: 5),
-        //   child: Expanded(
-        //     child: Container(
-        //       height: 155,
-        //       margin: EdgeInsets.symmetric(horizontal: 10),
-        //       decoration: BoxDecoration(
-        //         border: Border.all(width: 0.3, color: Colors.black),
-        //         color: Colors.white,
-        //         borderRadius: BorderRadius.circular(20),
-        //       ),
-        //       child: Column(
-        //         crossAxisAlignment: CrossAxisAlignment.start,
-        //         children: [
-        //           Padding(
-        //             padding: const EdgeInsets.only(
-        //               left: 20,
-        //               top: 15,
-        //             ),
-        //             child: SingleChildScrollView(
-        //               scrollDirection: Axis.horizontal,
-        //               child: Row(
-        //                 children: info
-        //                     .map((information) => design(information))
-        //                     .toList(),
-        //               ),
-        //             ),
-        //           ),
-        //           Padding(
-        //             padding: const EdgeInsets.only(top: 5, bottom: 4),
-        //             child: Divider(
-        //               color: Colors.black,
-        //               thickness: 0.5,
-        //             ),
-        //           ),
-        //           InkWell(
-        //             onTap: () {},
-        //             child: Row(
-        //               mainAxisAlignment: MainAxisAlignment.center,
-        //               crossAxisAlignment: CrossAxisAlignment.center,
-        //               children: [
-        //                 Text(
-        //                   "Barcha qoldiqlarni ko'rish",
-        //                   style: still,
-        //                 ),
-        //                 SizedBox(
-        //                   width: 5,
-        //                 ),
-        //                 Icon(
-        //                   Icons.arrow_forward_ios,
-        //                   size: 15,
-        //                   color: Colors.black.withOpacity(0.6),
-        //                 ),
-        //               ],
-        //             ),
-        //           )
-        //         ],
-        //       ),
-        //     ),
-        //   ),
-        // ),
-      ],
+        ],
+      ),
     );
   }
 }
@@ -363,14 +302,14 @@ Widget design(information) {
       children: [
         Text(
           information.text1,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w500,
           ),
         ),
         Text(
           information.text2,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 17,
           ),
         ),

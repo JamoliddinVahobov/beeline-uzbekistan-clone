@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_const_declarations
 import 'package:beeline_uzbekistan_clone/barcha_xizmatlar_content.dart';
 import 'package:beeline_uzbekistan_clone/tariflar_content.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +19,7 @@ class TariflarState extends State<Tariflar> {
         title: buildCustomSegmentedControl(),
         backgroundColor: Colors.white,
         flexibleSpace: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             border: Border(
               bottom: BorderSide(
                 color: Colors.black,

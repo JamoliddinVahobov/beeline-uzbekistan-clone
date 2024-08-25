@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:beeline_uzbekistan_clone/balans_va_qoldiqlar.dart';
 import 'package:beeline_uzbekistan_clone/beees_class.dart';
 import 'package:beeline_uzbekistan_clone/ommabop_containers.dart';
@@ -21,7 +20,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             Container(
               height: 600,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
                     Colors.white,
@@ -35,7 +34,7 @@ class HomeScreen extends StatelessWidget {
                   end: Alignment.topRight,
                 ),
               ),
-              child: SingleChildScrollView(
+              child: const SingleChildScrollView(
                 child: Column(
                   children: [
                     SizedBox(
@@ -47,10 +46,10 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Ommabop(),
-            TheList(),
-            Bees(),
-            SizedBox(height: 20),
+            const Ommabop(),
+            const TheList(),
+            const Bees(),
+            const SizedBox(height: 20),
           ],
         ),
       ),

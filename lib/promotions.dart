@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+import 'package:beeline_uzbekistan_clone/inside_promotions.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -29,12 +29,9 @@ class PromotionsState extends State<Promotions> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 75),
+      padding: const EdgeInsets.only(top: 75, left: 15, right: 7),
       child: Row(
         children: [
-          SizedBox(
-            width: 10,
-          ),
           Expanded(
             child: SizedBox(
               height: 150,
@@ -44,21 +41,30 @@ class PromotionsState extends State<Promotions> {
                     .map(
                       (url) => Padding(
                         padding: const EdgeInsets.only(right: 8),
-                        child: Container(
-                          height: 120,
-                          width: 120,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.blue.shade700,
-                              width: 3,
-                            ),
-                            image: DecorationImage(
-                              image: AssetImage(
-                                url,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        InsidePromotions(imageIndex: url)));
+                          },
+                          child: Container(
+                            height: 120,
+                            width: 120,
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Colors.blue.shade700,
+                                width: 3,
                               ),
-                              fit: BoxFit.cover,
+                              image: DecorationImage(
+                                image: AssetImage(
+                                  url,
+                                ),
+                                fit: BoxFit.cover,
+                              ),
+                              borderRadius: BorderRadius.circular(20),
                             ),
-                            borderRadius: BorderRadius.circular(20),
                           ),
                         ),
                       ),
@@ -71,7 +77,7 @@ class PromotionsState extends State<Promotions> {
                   enableInfiniteScroll: false,
                   viewportFraction: 0.3,
                   autoPlay: true,
-                  autoPlayInterval: Duration(seconds: 5),
+                  autoPlayInterval: const Duration(seconds: 5),
                 ),
               ),
             ),

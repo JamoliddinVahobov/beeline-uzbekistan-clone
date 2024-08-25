@@ -1,7 +1,6 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_const_declarations
 import 'package:flutter/material.dart';
 
-final still = TextStyle(
+const still = TextStyle(
   color: Colors.black,
   fontSize: 17,
 );
@@ -14,7 +13,7 @@ class Qoldiqlar extends StatefulWidget {
 }
 
 class _QoldiqlarState extends State<Qoldiqlar> {
-  final TextStyle normalStyle = TextStyle(
+  final TextStyle normalStyle = const TextStyle(
     fontSize: 17,
     fontWeight: FontWeight.w500,
     color: Colors.black,
@@ -52,7 +51,7 @@ class _QoldiqlarState extends State<Qoldiqlar> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          padding: EdgeInsets.only(
+          padding: const EdgeInsets.only(
             left: 12,
             top: 20,
           ),
@@ -61,7 +60,7 @@ class _QoldiqlarState extends State<Qoldiqlar> {
               return GestureDetector(
                 onTap: () {},
                 child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 16.0),
+                  padding: const EdgeInsets.symmetric(vertical: 16.0),
                   child: Column(
                     children: [
                       Row(
@@ -73,7 +72,7 @@ class _QoldiqlarState extends State<Qoldiqlar> {
                                 item['icon'],
                                 color: item['color'],
                               ),
-                              SizedBox(width: 16.0),
+                              const SizedBox(width: 16.0),
                               Text(
                                 item['text'],
                                 style: still,
@@ -88,7 +87,7 @@ class _QoldiqlarState extends State<Qoldiqlar> {
                                   item['amount'],
                                   style: still,
                                 ),
-                                SizedBox(width: 3),
+                                const SizedBox(width: 3),
                                 Icon(
                                   Icons.arrow_forward_ios,
                                   color: Colors.black.withOpacity(0.6),
@@ -99,8 +98,8 @@ class _QoldiqlarState extends State<Qoldiqlar> {
                           ),
                         ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 5),
+                      const Padding(
+                        padding: EdgeInsets.only(top: 5),
                         child: Divider(
                           thickness: 0.4,
                           color: Colors.black,
@@ -128,7 +127,7 @@ class _QoldiqlarState extends State<Qoldiqlar> {
               boxShadow: [
                 BoxShadow(
                   color: Colors.black.withOpacity(0.3),
-                  offset: Offset(0, 1.5),
+                  offset: const Offset(0, 1.5),
                   blurRadius: 4,
                 ),
               ],
@@ -140,7 +139,7 @@ class _QoldiqlarState extends State<Qoldiqlar> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'Kirim vs xarajatlar',
                     style: TextStyle(
                       fontSize: 18,
@@ -152,13 +151,13 @@ class _QoldiqlarState extends State<Qoldiqlar> {
                     style: TextStyle(
                         fontSize: 15, color: Colors.black.withAlpha(150)),
                   ),
-                  SizedBox(height: 12),
-                  Row(
+                  const SizedBox(height: 12),
+                  const Row(
                     children: [
                       Text('To\'ldirish'),
                       Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 15),
+                          padding: EdgeInsets.symmetric(horizontal: 15),
                           child: ClipRRect(
                             borderRadius: BorderRadius.only(
                               topRight: Radius.circular(10),
@@ -173,18 +172,18 @@ class _QoldiqlarState extends State<Qoldiqlar> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right: 17),
+                        padding: EdgeInsets.only(right: 17),
                         child: Text('38 000'),
                       ),
                     ],
                   ),
-                  SizedBox(height: 5),
-                  Row(
+                  const SizedBox(height: 5),
+                  const Row(
                     children: [
                       Text('Xarajatlar'),
                       Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          padding: EdgeInsets.symmetric(horizontal: 10),
                           child: ClipRRect(
                             borderRadius: BorderRadius.only(
                               topRight: Radius.circular(10),
@@ -199,7 +198,7 @@ class _QoldiqlarState extends State<Qoldiqlar> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right: 22),
+                        padding: EdgeInsets.only(right: 22),
                         child: Text('37 000'),
                       ),
                     ],
@@ -218,7 +217,7 @@ class _QoldiqlarState extends State<Qoldiqlar> {
               bottom: 30,
             ),
             child: Container(
-              padding: EdgeInsets.symmetric(vertical: 12),
+              padding: const EdgeInsets.symmetric(vertical: 12),
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: Colors.grey.shade200,
@@ -230,8 +229,8 @@ class _QoldiqlarState extends State<Qoldiqlar> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.money, color: Colors.black),
-                  SizedBox(width: 8),
+                  const Icon(Icons.money, color: Colors.black),
+                  const SizedBox(width: 8),
                   Text(
                     'Kirimlarni tekshirish',
                     style: normalStyle,
@@ -272,14 +271,14 @@ class _QoldiqlarState extends State<Qoldiqlar> {
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black.withOpacity(0.3),
-                          offset: Offset(0, 1.5),
+                          offset: const Offset(0, 1.5),
                           blurRadius: 4,
                         ),
                       ],
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 17, top: 10),
+                    child: const Padding(
+                      padding: EdgeInsets.only(left: 17, top: 10),
                       child: Row(
                         children: [
                           Column(
@@ -303,7 +302,7 @@ class _QoldiqlarState extends State<Qoldiqlar> {
                             ],
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(top: 42, left: 35),
+                            padding: EdgeInsets.only(top: 42, left: 35),
                             child: Icon(Icons.picture_as_pdf_outlined),
                           ),
                         ],
@@ -327,14 +326,14 @@ class _QoldiqlarState extends State<Qoldiqlar> {
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black.withOpacity(0.3),
-                          offset: Offset(0, 1.5),
+                          offset: const Offset(0, 1.5),
                           blurRadius: 4,
                         ),
                       ],
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 17, top: 10),
+                    child: const Padding(
+                      padding: EdgeInsets.only(left: 17, top: 10),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -347,7 +346,7 @@ class _QoldiqlarState extends State<Qoldiqlar> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(top: 30, left: 125),
+                            padding: EdgeInsets.only(top: 30, left: 125),
                             child: Icon(Icons.mail_outlined),
                           ),
                         ],

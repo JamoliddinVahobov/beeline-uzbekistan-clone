@@ -1,10 +1,9 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_const_declarations
 import 'package:flutter/material.dart';
 
-final TextStyle normalStyle =
+const TextStyle normalStyle =
     TextStyle(fontSize: 17, fontWeight: FontWeight.w500);
 
-final still = TextStyle(
+const still = TextStyle(
   color: Colors.black,
   fontSize: 17,
 );
@@ -72,14 +71,14 @@ class _MultiPlusState extends State<MultiPlus> {
             child: Container(
               height: 50,
               width: 200,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.orange,
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(7),
                   bottomRight: Radius.circular(7),
                 ),
               ),
-              child: Padding(
+              child: const Padding(
                 padding: EdgeInsets.only(left: 20, top: 11),
                 child: Text(
                   'MULTI PLUS',
@@ -93,7 +92,7 @@ class _MultiPlusState extends State<MultiPlus> {
             ),
           ),
           Container(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               left: 15,
               top: 20,
             ),
@@ -104,21 +103,21 @@ class _MultiPlusState extends State<MultiPlus> {
                   return GestureDetector(
                     onTap: () {},
                     child: Container(
-                      padding: EdgeInsets.symmetric(vertical: 5),
+                      padding: const EdgeInsets.symmetric(vertical: 5),
                       child: Column(
                         children: [
                           Row(
                             children: [
                               Icon(item['icon']),
-                              SizedBox(width: 16.0),
+                              const SizedBox(width: 16.0),
                               Text(
                                 item['text'],
                                 style: still,
                               ),
                             ],
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 5),
+                          const Padding(
+                            padding: EdgeInsets.only(top: 5),
                             child: Divider(
                               thickness: 0.4,
                               color: Colors.black,
@@ -133,8 +132,8 @@ class _MultiPlusState extends State<MultiPlus> {
                 GestureDetector(
                   onTap: () {},
                   child: Container(
-                    padding: EdgeInsets.symmetric(vertical: 3),
-                    child: Row(
+                    padding: const EdgeInsets.symmetric(vertical: 3),
+                    child: const Row(
                       children: [
                         Icon(Icons.money),
                         SizedBox(width: 16.0),
@@ -158,8 +157,8 @@ class _MultiPlusState extends State<MultiPlus> {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 15),
+          const Padding(
+            padding: EdgeInsets.only(left: 15),
             child: Text(
               '1 ta super kuch tanlovga',
               style: TextStyle(
@@ -186,10 +185,10 @@ class _MultiPlusState extends State<MultiPlus> {
                   );
                 }).toList(),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Row(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 15,
                   ),
                   Container(
@@ -214,7 +213,7 @@ class _MultiPlusState extends State<MultiPlus> {
                       }).toList(),
                     ),
                   ),
-                  SizedBox(width: 15),
+                  const SizedBox(width: 15),
                   Container(
                     height: 45,
                     width: 130,
@@ -241,8 +240,8 @@ class _MultiPlusState extends State<MultiPlus> {
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 110, top: 10),
+          const Padding(
+            padding: EdgeInsets.only(left: 110, top: 10),
             child: Text(
               "40 000 so'm/oy",
               style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
@@ -251,18 +250,18 @@ class _MultiPlusState extends State<MultiPlus> {
           GestureDetector(
             onTap: () {},
             child: Padding(
-              padding: EdgeInsets.only(left: 15, right: 15, bottom: 17),
+              padding: const EdgeInsets.only(left: 15, right: 15, bottom: 17),
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 12),
+                padding: const EdgeInsets.symmetric(vertical: 12),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: Colors.amber[400],
                   borderRadius: BorderRadius.circular(10),
-                  border: Border(
+                  border: const Border(
                     bottom: BorderSide(color: Colors.orange, width: 5),
                   ),
                 ),
-                child: Center(
+                child: const Center(
                   child: Text("Ulash", style: normalStyle),
                 ),
               ),
@@ -337,14 +336,14 @@ class _MultiProState extends State<MultiPro> {
             child: Container(
               height: 50,
               width: 200,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.blue,
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(7),
                   bottomRight: Radius.circular(7),
                 ),
               ),
-              child: Padding(
+              child: const Padding(
                 padding: EdgeInsets.only(left: 20, top: 11),
                 child: Text(
                   'MULTI PRO',
@@ -358,7 +357,7 @@ class _MultiProState extends State<MultiPro> {
             ),
           ),
           Container(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               left: 15,
               top: 20,
             ),
@@ -369,21 +368,21 @@ class _MultiProState extends State<MultiPro> {
                   return GestureDetector(
                     onTap: () {},
                     child: Container(
-                      padding: EdgeInsets.symmetric(vertical: 5),
+                      padding: const EdgeInsets.symmetric(vertical: 5),
                       child: Column(
                         children: [
                           Row(
                             children: [
                               Icon(item['icon']),
-                              SizedBox(width: 16.0),
+                              const SizedBox(width: 16.0),
                               Text(
                                 item['text'],
                                 style: still,
                               ),
                             ],
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 5),
+                          const Padding(
+                            padding: EdgeInsets.only(top: 5),
                             child: Divider(
                               thickness: 0.4,
                               color: Colors.black,
@@ -398,8 +397,8 @@ class _MultiProState extends State<MultiPro> {
                 GestureDetector(
                   onTap: () {},
                   child: Container(
-                    padding: EdgeInsets.symmetric(vertical: 3),
-                    child: Row(
+                    padding: const EdgeInsets.symmetric(vertical: 3),
+                    child: const Row(
                       children: [
                         Icon(Icons.money),
                         SizedBox(width: 16.0),
@@ -423,8 +422,8 @@ class _MultiProState extends State<MultiPro> {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 15),
+          const Padding(
+            padding: EdgeInsets.only(left: 15),
             child: Text(
               '2 ta super kuch tanlovga',
               style: TextStyle(
@@ -451,10 +450,10 @@ class _MultiProState extends State<MultiPro> {
                   );
                 }).toList(),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Row(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 15,
                   ),
                   Container(
@@ -479,7 +478,7 @@ class _MultiProState extends State<MultiPro> {
                       }).toList(),
                     ),
                   ),
-                  SizedBox(width: 15),
+                  const SizedBox(width: 15),
                   Container(
                     height: 45,
                     width: 130,
@@ -506,8 +505,8 @@ class _MultiProState extends State<MultiPro> {
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 110, top: 10),
+          const Padding(
+            padding: EdgeInsets.only(left: 110, top: 10),
             child: Text(
               "60 000 so'm/oy",
               style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
@@ -516,18 +515,18 @@ class _MultiProState extends State<MultiPro> {
           GestureDetector(
             onTap: () {},
             child: Padding(
-              padding: EdgeInsets.only(left: 15, right: 15, bottom: 17),
+              padding: const EdgeInsets.only(left: 15, right: 15, bottom: 17),
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 12),
+                padding: const EdgeInsets.symmetric(vertical: 12),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: Colors.amber[400],
                   borderRadius: BorderRadius.circular(10),
-                  border: Border(
+                  border: const Border(
                     bottom: BorderSide(color: Colors.orange, width: 5),
                   ),
                 ),
-                child: Center(
+                child: const Center(
                   child: Text("Ulash", style: normalStyle),
                 ),
               ),
@@ -602,14 +601,14 @@ class _MultiMaxState extends State<MultiMax> {
             child: Container(
               height: 50,
               width: 200,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.blue,
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(7),
                   bottomRight: Radius.circular(7),
                 ),
               ),
-              child: Padding(
+              child: const Padding(
                 padding: EdgeInsets.only(left: 20, top: 11),
                 child: Text(
                   'MULTI MAX',
@@ -623,7 +622,7 @@ class _MultiMaxState extends State<MultiMax> {
             ),
           ),
           Container(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               left: 15,
               top: 20,
             ),
@@ -634,21 +633,21 @@ class _MultiMaxState extends State<MultiMax> {
                   return GestureDetector(
                     onTap: () {},
                     child: Container(
-                      padding: EdgeInsets.symmetric(vertical: 5),
+                      padding: const EdgeInsets.symmetric(vertical: 5),
                       child: Column(
                         children: [
                           Row(
                             children: [
                               Icon(item['icon']),
-                              SizedBox(width: 16.0),
+                              const SizedBox(width: 16.0),
                               Text(
                                 item['text'],
                                 style: still,
                               ),
                             ],
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 5),
+                          const Padding(
+                            padding: EdgeInsets.only(top: 5),
                             child: Divider(
                               thickness: 0.4,
                               color: Colors.black,
@@ -663,8 +662,8 @@ class _MultiMaxState extends State<MultiMax> {
                 GestureDetector(
                   onTap: () {},
                   child: Container(
-                    padding: EdgeInsets.symmetric(vertical: 3),
-                    child: Row(
+                    padding: const EdgeInsets.symmetric(vertical: 3),
+                    child: const Row(
                       children: [
                         Icon(Icons.money),
                         SizedBox(width: 16.0),
@@ -688,8 +687,8 @@ class _MultiMaxState extends State<MultiMax> {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 15),
+          const Padding(
+            padding: EdgeInsets.only(left: 15),
             child: Text(
               '3 ta super kuch tanlovga',
               style: TextStyle(
@@ -716,10 +715,10 @@ class _MultiMaxState extends State<MultiMax> {
                   );
                 }).toList(),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Row(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 15,
                   ),
                   Container(
@@ -744,7 +743,7 @@ class _MultiMaxState extends State<MultiMax> {
                       }).toList(),
                     ),
                   ),
-                  SizedBox(width: 15),
+                  const SizedBox(width: 15),
                   Container(
                     height: 45,
                     width: 130,
@@ -771,8 +770,8 @@ class _MultiMaxState extends State<MultiMax> {
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 110, top: 10),
+          const Padding(
+            padding: EdgeInsets.only(left: 110, top: 10),
             child: Text(
               "80 000 so'm/oy",
               style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
@@ -781,18 +780,18 @@ class _MultiMaxState extends State<MultiMax> {
           GestureDetector(
             onTap: () {},
             child: Padding(
-              padding: EdgeInsets.only(left: 15, right: 15, bottom: 17),
+              padding: const EdgeInsets.only(left: 15, right: 15, bottom: 17),
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 12),
+                padding: const EdgeInsets.symmetric(vertical: 12),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: Colors.amber[400],
                   borderRadius: BorderRadius.circular(10),
-                  border: Border(
+                  border: const Border(
                     bottom: BorderSide(color: Colors.orange, width: 5),
                   ),
                 ),
-                child: Center(
+                child: const Center(
                   child: Text("Ulash", style: normalStyle),
                 ),
               ),
@@ -868,14 +867,14 @@ class _StatusSilverState extends State<StatusSilver> {
             child: Container(
               height: 50,
               width: 120,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.teal,
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(7),
                   bottomRight: Radius.circular(7),
                 ),
               ),
-              child: Padding(
+              child: const Padding(
                 padding: EdgeInsets.only(left: 18, top: 10),
                 child: Text(
                   'Status',
@@ -888,7 +887,7 @@ class _StatusSilverState extends State<StatusSilver> {
               ),
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 20, top: 0),
             child: Text(
               'Silver',
@@ -901,7 +900,7 @@ class _StatusSilverState extends State<StatusSilver> {
           ),
           ListView.separated(
             shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             itemCount: silver.length,
             itemBuilder: (context, index) {
               final item = silver[index];
@@ -916,12 +915,13 @@ class _StatusSilverState extends State<StatusSilver> {
             },
             separatorBuilder: (context, index) {
               return index < silver.length - 1
-                  ? Divider(thickness: 0.3, color: Colors.black, indent: 55)
-                  : SizedBox.shrink();
+                  ? const Divider(
+                      thickness: 0.3, color: Colors.black, indent: 55)
+                  : const SizedBox.shrink();
             },
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 110, top: 10, bottom: 5),
+          const Padding(
+            padding: EdgeInsets.only(left: 110, top: 10, bottom: 5),
             child: Text(
               "110 000 so'm/oy",
               style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
@@ -930,18 +930,18 @@ class _StatusSilverState extends State<StatusSilver> {
           GestureDetector(
             onTap: () {},
             child: Padding(
-              padding: EdgeInsets.only(left: 15, right: 15, bottom: 20),
+              padding: const EdgeInsets.only(left: 15, right: 15, bottom: 20),
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 12),
+                padding: const EdgeInsets.symmetric(vertical: 12),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: Colors.amber[400],
                   borderRadius: BorderRadius.circular(10),
-                  border: Border(
+                  border: const Border(
                     bottom: BorderSide(color: Colors.orange, width: 5),
                   ),
                 ),
-                child: Center(
+                child: const Center(
                   child: Text("Ulash", style: normalStyle),
                 ),
               ),
@@ -1017,14 +1017,14 @@ class _StatusGoldState extends State<StatusGold> {
             child: Container(
               height: 50,
               width: 120,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.teal,
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(7),
                   bottomRight: Radius.circular(7),
                 ),
               ),
-              child: Padding(
+              child: const Padding(
                 padding: EdgeInsets.only(left: 18, top: 10),
                 child: Text(
                   'Status',
@@ -1037,7 +1037,7 @@ class _StatusGoldState extends State<StatusGold> {
               ),
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 20, top: 0),
             child: Text(
               'Gold',
@@ -1050,7 +1050,7 @@ class _StatusGoldState extends State<StatusGold> {
           ),
           ListView.separated(
             shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             itemCount: gold.length,
             itemBuilder: (context, index) {
               final item = gold[index];
@@ -1065,12 +1065,13 @@ class _StatusGoldState extends State<StatusGold> {
             },
             separatorBuilder: (context, index) {
               return index < gold.length - 1
-                  ? Divider(thickness: 0.3, color: Colors.black, indent: 55)
-                  : SizedBox.shrink();
+                  ? const Divider(
+                      thickness: 0.3, color: Colors.black, indent: 55)
+                  : const SizedBox.shrink();
             },
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 110, top: 10, bottom: 5),
+          const Padding(
+            padding: EdgeInsets.only(left: 110, top: 10, bottom: 5),
             child: Text(
               "150 000 so'm/oy",
               style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
@@ -1079,18 +1080,18 @@ class _StatusGoldState extends State<StatusGold> {
           GestureDetector(
             onTap: () {},
             child: Padding(
-              padding: EdgeInsets.only(left: 15, right: 15, bottom: 20),
+              padding: const EdgeInsets.only(left: 15, right: 15, bottom: 20),
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 12),
+                padding: const EdgeInsets.symmetric(vertical: 12),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: Colors.amber[400],
                   borderRadius: BorderRadius.circular(10),
-                  border: Border(
+                  border: const Border(
                     bottom: BorderSide(color: Colors.orange, width: 5),
                   ),
                 ),
-                child: Center(
+                child: const Center(
                   child: Text("Ulash", style: normalStyle),
                 ),
               ),
@@ -1171,14 +1172,14 @@ class _StatusPlatinumState extends State<StatusPlatinum> {
             child: Container(
               height: 50,
               width: 120,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.teal,
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(7),
                   bottomRight: Radius.circular(7),
                 ),
               ),
-              child: Padding(
+              child: const Padding(
                 padding: EdgeInsets.only(left: 18, top: 10),
                 child: Text(
                   'Status',
@@ -1191,7 +1192,7 @@ class _StatusPlatinumState extends State<StatusPlatinum> {
               ),
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 20, top: 0),
             child: Text(
               'Platinum',
@@ -1204,7 +1205,7 @@ class _StatusPlatinumState extends State<StatusPlatinum> {
           ),
           ListView.separated(
             shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             itemCount: silver.length,
             itemBuilder: (context, index) {
               final item = silver[index];
@@ -1219,12 +1220,13 @@ class _StatusPlatinumState extends State<StatusPlatinum> {
             },
             separatorBuilder: (context, index) {
               return index < silver.length - 1
-                  ? Divider(thickness: 0.3, color: Colors.black, indent: 55)
-                  : SizedBox.shrink();
+                  ? const Divider(
+                      thickness: 0.3, color: Colors.black, indent: 55)
+                  : const SizedBox.shrink();
             },
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 110, top: 10, bottom: 5),
+          const Padding(
+            padding: EdgeInsets.only(left: 110, top: 10, bottom: 5),
             child: Text(
               "200 000 so'm/oy",
               style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
@@ -1233,18 +1235,18 @@ class _StatusPlatinumState extends State<StatusPlatinum> {
           GestureDetector(
             onTap: () {},
             child: Padding(
-              padding: EdgeInsets.only(left: 15, right: 15, bottom: 20),
+              padding: const EdgeInsets.only(left: 15, right: 15, bottom: 20),
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 12),
+                padding: const EdgeInsets.symmetric(vertical: 12),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: Colors.amber[400],
                   borderRadius: BorderRadius.circular(10),
-                  border: Border(
+                  border: const Border(
                     bottom: BorderSide(color: Colors.orange, width: 5),
                   ),
                 ),
-                child: Center(
+                child: const Center(
                   child: Text("Ulash", style: normalStyle),
                 ),
               ),
@@ -1301,14 +1303,14 @@ class _BeelineSportState extends State<BeelineSport> {
             child: Container(
               height: 50,
               width: 120,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.orange,
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(7),
                   bottomRight: Radius.circular(7),
                 ),
               ),
-              child: Padding(
+              child: const Padding(
                 padding: EdgeInsets.only(left: 18, top: 10),
                 child: Text(
                   'Beeline',
@@ -1321,7 +1323,7 @@ class _BeelineSportState extends State<BeelineSport> {
               ),
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 20, top: 0),
             child: Text(
               'Sport',
@@ -1334,7 +1336,7 @@ class _BeelineSportState extends State<BeelineSport> {
           ),
           ListView.separated(
             shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             itemCount: silver.length,
             itemBuilder: (context, index) {
               final item = silver[index];
@@ -1346,12 +1348,13 @@ class _BeelineSportState extends State<BeelineSport> {
             },
             separatorBuilder: (context, index) {
               return index < silver.length - 1
-                  ? Divider(thickness: 0.3, color: Colors.black, indent: 55)
-                  : SizedBox.shrink();
+                  ? const Divider(
+                      thickness: 0.3, color: Colors.black, indent: 55)
+                  : const SizedBox.shrink();
             },
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 110, top: 10, bottom: 5),
+          const Padding(
+            padding: EdgeInsets.only(left: 110, top: 10, bottom: 5),
             child: Text(
               "50 000 so'm/oy",
               style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
@@ -1360,18 +1363,18 @@ class _BeelineSportState extends State<BeelineSport> {
           GestureDetector(
             onTap: () {},
             child: Padding(
-              padding: EdgeInsets.only(left: 15, right: 15, bottom: 20),
+              padding: const EdgeInsets.only(left: 15, right: 15, bottom: 20),
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 12),
+                padding: const EdgeInsets.symmetric(vertical: 12),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: Colors.amber[400],
                   borderRadius: BorderRadius.circular(10),
-                  border: Border(
+                  border: const Border(
                     bottom: BorderSide(color: Colors.orange, width: 5),
                   ),
                 ),
-                child: Center(
+                child: const Center(
                   child: Text("Ulash", style: normalStyle),
                 ),
               ),

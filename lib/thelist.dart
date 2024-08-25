@@ -1,7 +1,6 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
 
-final still = TextStyle(
+const still = TextStyle(
   color: Colors.black,
   fontSize: 17,
 );
@@ -30,8 +29,8 @@ class TheListState extends State<TheList> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(
-        left: 12,
+      padding: const EdgeInsets.only(
+        left: 15,
         top: 20,
       ),
       child: Column(
@@ -39,7 +38,7 @@ class TheListState extends State<TheList> {
           return GestureDetector(
             onTap: () {},
             child: Container(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
+              padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: Column(
                 children: [
                   Row(
@@ -48,19 +47,19 @@ class TheListState extends State<TheList> {
                       Row(
                         children: [
                           Icon(item['icon']),
-                          SizedBox(width: 16.0),
+                          const SizedBox(width: 16.0),
                           Text(
                             item['text'],
                             style: still,
                           ),
                         ],
                       ),
-                      SizedBox(width: 45),
+                      const SizedBox(width: 45),
                       if (item['trailing'] != null)
                         Row(
                           children: [
                             Container(
-                              padding: EdgeInsets.symmetric(
+                              padding: const EdgeInsets.symmetric(
                                   horizontal: 8.0, vertical: 4.0),
                               decoration: BoxDecoration(
                                 border: Border.all(
@@ -71,7 +70,7 @@ class TheListState extends State<TheList> {
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               child: Text(item['trailing'],
-                                  style: TextStyle(color: Colors.green)),
+                                  style: const TextStyle(color: Colors.green)),
                             ),
                           ],
                         ),
@@ -85,8 +84,8 @@ class TheListState extends State<TheList> {
                       ),
                     ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 5),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 5),
                     child: Divider(
                       thickness: 0.4,
                       color: Colors.black,

@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_const_declarations
 import 'package:flutter/material.dart';
 
 class BarchaXizmatlarContent extends StatefulWidget {
@@ -297,16 +296,16 @@ class BarchaXizmatlarContentState extends State<BarchaXizmatlarContent> {
                   GestureDetector(
                     onTap: () {},
                     child: Container(
-                      padding: EdgeInsets.symmetric(vertical: 11),
+                      padding: const EdgeInsets.symmetric(vertical: 11),
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         color: Colors.amber[400],
                         borderRadius: BorderRadius.circular(10),
-                        border: Border(
+                        border: const Border(
                           bottom: BorderSide(color: Colors.orange, width: 5),
                         ),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           "Batafsil",
                           style: TextStyle(fontWeight: FontWeight.bold),
@@ -364,16 +363,16 @@ class BarchaXizmatlarContentState extends State<BarchaXizmatlarContent> {
                   GestureDetector(
                     onTap: () {},
                     child: Container(
-                      padding: EdgeInsets.symmetric(vertical: 11),
+                      padding: const EdgeInsets.symmetric(vertical: 11),
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         color: Colors.amber[400],
                         borderRadius: BorderRadius.circular(10),
-                        border: Border(
+                        border: const Border(
                           bottom: BorderSide(color: Colors.orange, width: 5),
                         ),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           "Batafsil",
                           style: TextStyle(fontWeight: FontWeight.bold),
@@ -430,16 +429,16 @@ class BarchaXizmatlarContentState extends State<BarchaXizmatlarContent> {
                   GestureDetector(
                     onTap: () {},
                     child: Container(
-                      padding: EdgeInsets.symmetric(vertical: 11),
+                      padding: const EdgeInsets.symmetric(vertical: 11),
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         color: Colors.amber[400],
                         borderRadius: BorderRadius.circular(10),
-                        border: Border(
+                        border: const Border(
                           bottom: BorderSide(color: Colors.orange, width: 5),
                         ),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           "Batafsil",
                           style: TextStyle(fontWeight: FontWeight.bold),
@@ -496,16 +495,16 @@ class BarchaXizmatlarContentState extends State<BarchaXizmatlarContent> {
                   GestureDetector(
                     onTap: () {},
                     child: Container(
-                      padding: EdgeInsets.symmetric(vertical: 11),
+                      padding: const EdgeInsets.symmetric(vertical: 11),
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         color: Colors.amber[400],
                         borderRadius: BorderRadius.circular(10),
-                        border: Border(
+                        border: const Border(
                           bottom: BorderSide(color: Colors.orange, width: 5),
                         ),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           "Batafsil",
                           style: TextStyle(fontWeight: FontWeight.bold),
@@ -561,16 +560,16 @@ class BarchaXizmatlarContentState extends State<BarchaXizmatlarContent> {
                   GestureDetector(
                     onTap: () {},
                     child: Container(
-                      padding: EdgeInsets.symmetric(vertical: 11),
+                      padding: const EdgeInsets.symmetric(vertical: 11),
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         color: Colors.amber[400],
                         borderRadius: BorderRadius.circular(10),
-                        border: Border(
+                        border: const Border(
                           bottom: BorderSide(color: Colors.orange, width: 5),
                         ),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           "Batafsil",
                           style: TextStyle(fontWeight: FontWeight.bold),

@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_const_declarations
 import 'package:flutter/material.dart';
 
 class Kongilochar extends StatefulWidget {
@@ -10,9 +9,9 @@ class Kongilochar extends StatefulWidget {
 
 class _KongilocharState extends State<Kongilochar> {
   final TextStyle headerStyle =
-      TextStyle(fontSize: 24, fontWeight: FontWeight.bold);
+      const TextStyle(fontSize: 24, fontWeight: FontWeight.bold);
   final TextStyle normalStyle =
-      TextStyle(fontSize: 17, fontWeight: FontWeight.w500);
+      const TextStyle(fontSize: 17, fontWeight: FontWeight.w500);
   final TextStyle opacityStyle = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w400,
@@ -24,15 +23,15 @@ class _KongilocharState extends State<Kongilochar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Ko'ngilochar",
           style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
         ),
         centerTitle: true,
         bottom: PreferredSize(
-          preferredSize: Size.fromHeight(1),
+          preferredSize: const Size.fromHeight(1),
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               border: Border(
                 bottom: BorderSide(
                   color: Colors.black,
@@ -43,75 +42,78 @@ class _KongilocharState extends State<Kongilochar> {
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Padding(
-              padding:
-                  const EdgeInsets.only(top: 25, bottom: 10, left: 2, right: 5),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Container(
-                    height: 105,
-                    width: 105,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Colors.black,
-                        width: 0.5,
-                      ),
-                      borderRadius: BorderRadius.circular(25),
-                      image: DecorationImage(
-                        image: AssetImage(
-                          "assets/eur.png",
+      body: Padding(
+        padding: const EdgeInsets.only(left: 3, right: 5),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(
+                    top: 25, bottom: 10, left: 2, right: 5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Container(
+                      height: 105,
+                      width: 105,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 0.5,
                         ),
-                        fit: BoxFit.cover,
+                        borderRadius: BorderRadius.circular(25),
+                        image: const DecorationImage(
+                          image: AssetImage(
+                            "assets/eur.png",
+                          ),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
-                  ),
-                  Container(
-                    height: 105,
-                    width: 105,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Colors.black,
-                        width: 0.5,
-                      ),
-                      borderRadius: BorderRadius.circular(25),
-                      image: DecorationImage(
-                        image: AssetImage(
-                          "assets/ronald.jpg",
+                    Container(
+                      height: 105,
+                      width: 105,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 0.5,
                         ),
-                        fit: BoxFit.cover,
+                        borderRadius: BorderRadius.circular(25),
+                        image: const DecorationImage(
+                          image: AssetImage(
+                            "assets/ronald.jpg",
+                          ),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
-                  ),
-                  Container(
-                    height: 105,
-                    width: 105,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Colors.black,
-                        width: 0.5,
-                      ),
-                      borderRadius: BorderRadius.circular(25),
-                      image: DecorationImage(
-                        image: AssetImage(
-                          "assets/tv.png",
+                    Container(
+                      height: 105,
+                      width: 105,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 0.5,
                         ),
-                        fit: BoxFit.cover,
+                        borderRadius: BorderRadius.circular(25),
+                        image: const DecorationImage(
+                          image: AssetImage(
+                            "assets/tv.png",
+                          ),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            buildBeeMarketSection(),
-            buildBeelineTVSection(),
-            buildBeelineMusicSection(),
-            buildBeepulSection(),
-            buildBipSection(),
-          ],
+              buildBeeMarketSection(),
+              buildBeelineTVSection(),
+              buildBeelineMusicSection(),
+              buildBeepulSection(),
+              buildBipSection(),
+            ],
+          ),
         ),
       ),
     );
@@ -143,12 +145,12 @@ class _KongilocharState extends State<Kongilochar> {
           GestureDetector(
             onTap: () {},
             child: Container(
-              padding: EdgeInsets.symmetric(vertical: 12),
+              padding: const EdgeInsets.symmetric(vertical: 12),
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: Colors.amber[400],
                 borderRadius: BorderRadius.circular(10),
-                border: Border(
+                border: const Border(
                   bottom: BorderSide(color: Colors.orange, width: 5),
                 ),
               ),
@@ -187,12 +189,12 @@ class _KongilocharState extends State<Kongilochar> {
           GestureDetector(
             onTap: () {},
             child: Container(
-              padding: EdgeInsets.symmetric(vertical: 12),
+              padding: const EdgeInsets.symmetric(vertical: 12),
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: Colors.amber[400],
                 borderRadius: BorderRadius.circular(10),
-                border: Border(
+                border: const Border(
                   bottom: BorderSide(color: Colors.orange, width: 5),
                 ),
               ),
@@ -234,12 +236,12 @@ class _KongilocharState extends State<Kongilochar> {
             child: Padding(
               padding: const EdgeInsets.only(left: 5, right: 5, top: 5),
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 12),
+                padding: const EdgeInsets.symmetric(vertical: 12),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: Colors.amber[400],
                   borderRadius: BorderRadius.circular(10),
-                  border: Border(
+                  border: const Border(
                     bottom: BorderSide(color: Colors.orange, width: 5),
                   ),
                 ),
@@ -279,12 +281,12 @@ class _KongilocharState extends State<Kongilochar> {
           GestureDetector(
             onTap: () {},
             child: Container(
-              padding: EdgeInsets.symmetric(vertical: 12),
+              padding: const EdgeInsets.symmetric(vertical: 12),
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: Colors.amber[400],
                 borderRadius: BorderRadius.circular(10),
-                border: Border(
+                border: const Border(
                   bottom: BorderSide(color: Colors.orange, width: 5),
                 ),
               ),
@@ -322,12 +324,12 @@ class _KongilocharState extends State<Kongilochar> {
           GestureDetector(
             onTap: () {},
             child: Container(
-              padding: EdgeInsets.symmetric(vertical: 12),
+              padding: const EdgeInsets.symmetric(vertical: 12),
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: Colors.amber[400],
                 borderRadius: BorderRadius.circular(10),
-                border: Border(
+                border: const Border(
                   bottom: BorderSide(color: Colors.orange, width: 5),
                 ),
               ),

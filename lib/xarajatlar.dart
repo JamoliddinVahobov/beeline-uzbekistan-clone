@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_const_declarations
 import 'package:beeline_uzbekistan_clone/qoldiqlar.dart';
 import 'package:flutter/material.dart';
 
@@ -16,9 +15,9 @@ class _XarajatlarState extends State<Xarajatlar> {
       appBar: AppBar(
         toolbarHeight: 65,
         bottom: PreferredSize(
-          preferredSize: Size.fromHeight(1),
+          preferredSize: const Size.fromHeight(1),
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               border: Border(
                 bottom: BorderSide(
                   color: Colors.black,
@@ -28,8 +27,8 @@ class _XarajatlarState extends State<Xarajatlar> {
             ),
           ),
         ),
-        title: Padding(
-          padding: const EdgeInsets.only(top: 15),
+        title: const Padding(
+          padding: EdgeInsets.only(top: 15),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -49,7 +48,7 @@ class _XarajatlarState extends State<Xarajatlar> {
         actions: [
           Padding(
             padding: const EdgeInsets.only(top: 18, right: 5),
-            child: IconButton(icon: Icon(Icons.share), onPressed: () {}),
+            child: IconButton(icon: const Icon(Icons.share), onPressed: () {}),
           )
         ],
       ),
@@ -57,20 +56,20 @@ class _XarajatlarState extends State<Xarajatlar> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 45),
+            const SizedBox(height: 45),
             Center(
               child: Stack(
                 alignment: Alignment.center,
                 children: [
                   CustomPaint(
-                    size: Size(350, 170),
+                    size: const Size(350, 170),
                     painter: HalfCirclePainter(),
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 120),
+                      const Padding(
+                        padding: EdgeInsets.only(top: 120),
                         child: Text(
                           '35 000',
                           style: TextStyle(
@@ -91,7 +90,7 @@ class _XarajatlarState extends State<Xarajatlar> {
                 ],
               ),
             ),
-            SizedBox(height: 25),
+            const SizedBox(height: 25),
             Text(
               "Kiruvchi qo‘ng‘iroqlar ma’lumotlari har 3 kunda ",
               textAlign: TextAlign.center,
@@ -108,7 +107,7 @@ class _XarajatlarState extends State<Xarajatlar> {
                 color: Colors.black.withOpacity(0.6),
               ),
             ),
-            Qoldiqlar(),
+            const Qoldiqlar(),
           ],
         ),
       ),
@@ -116,7 +115,7 @@ class _XarajatlarState extends State<Xarajatlar> {
         height: 55,
         decoration: BoxDecoration(
           color: Colors.grey.shade200,
-          border: Border(
+          border: const Border(
             top: BorderSide(
               color: Colors.black,
               width: 0.2,
@@ -131,7 +130,7 @@ class _XarajatlarState extends State<Xarajatlar> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back_ios,
                 size: 18,
                 color: Colors.black,
@@ -147,10 +146,10 @@ class _XarajatlarState extends State<Xarajatlar> {
                 );
               }).toList(),
               onChanged: (_) {},
-              underline: SizedBox.shrink(),
+              underline: const SizedBox.shrink(),
             ),
             IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_forward_ios,
                 size: 18,
                 color: Colors.black,
@@ -173,8 +172,8 @@ class HalfCirclePainter extends CustomPainter {
       ..strokeWidth = 23
       ..strokeCap = StrokeCap.round;
 
-    final startAngle = -3.14; // -180 degrees
-    final sweepAngle = 3.14; // 180 degrees
+    const startAngle = -3.14; // -180 degrees
+    const sweepAngle = 3.14; // 180 degrees
 
     final rect = Rect.fromLTWH(0, 0, size.width, size.height * 2);
 

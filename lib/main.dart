@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_const_declarations
 import 'package:beeline_uzbekistan_clone/home_screen.dart';
 import 'package:beeline_uzbekistan_clone/kongilochar.dart';
 import 'package:beeline_uzbekistan_clone/moliyalar.dart';
@@ -9,7 +8,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -17,24 +16,24 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Beeline(),
       debugShowCheckedModeBanner: false,
     );
   }
 }
 
-final normal = TextStyle(
+const normal = TextStyle(
   fontWeight: FontWeight.w500,
   fontSize: 14,
 );
 
-final still = TextStyle(
+const still = TextStyle(
   color: Colors.black,
   fontSize: 17,
 );
 
-final cool = TextStyle(
+const cool = TextStyle(
   color: Colors.black,
   fontSize: 25,
   fontWeight: FontWeight.w900,
@@ -60,7 +59,7 @@ class _BeelineState extends State<Beeline> {
       _showSnackbar = !_showSnackbar;
     });
     if (_showSnackbar) {
-      Future.delayed(Duration(minutes: 100), () {
+      Future.delayed(const Duration(minutes: 100), () {
         if (mounted) {
           setState(() {
             _showSnackbar = false;
@@ -78,77 +77,80 @@ class _BeelineState extends State<Beeline> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        extendBodyBehindAppBar: true,
-        appBar: _selectedIndex == 0
-            ? CustomAppBar(
-                onTap: _toggleSnackbar,
-              )
-            : null,
-        body: Stack(
-          children: [
-            IndexedStack(
-              index: _selectedIndex,
-              children: [
-                HomeScreen(onSnackbarTap: _toggleSnackbar),
-                Xarajatlar(),
-                Tariflar(),
-                Kongilochar(),
-                Moliyalar(),
-              ],
-            ),
-            if (_showSnackbar)
-              GestureDetector(
-                onTap: _toggleSnackbar,
-                child: Container(
-                  color: Colors.black.withOpacity(0.5),
-                  child: Align(
-                    alignment: Alignment.bottomCenter,
-                    child: CustomSnackbarContent(
-                      onTap: () {
-                        setState(() {
-                          _showSnackbar = false;
-                        });
-                      },
+    return Container(
+      color: Colors.white,
+      child: SafeArea(
+        child: Scaffold(
+          extendBodyBehindAppBar: true,
+          appBar: _selectedIndex == 0
+              ? CustomAppBar(
+                  onTap: _toggleSnackbar,
+                )
+              : null,
+          body: Stack(
+            children: [
+              IndexedStack(
+                index: _selectedIndex,
+                children: [
+                  HomeScreen(onSnackbarTap: _toggleSnackbar),
+                  const Xarajatlar(),
+                  const Tariflar(),
+                  const Kongilochar(),
+                  const Moliyalar(),
+                ],
+              ),
+              if (_showSnackbar)
+                GestureDetector(
+                  onTap: _toggleSnackbar,
+                  child: Container(
+                    color: Colors.black.withOpacity(0.5),
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: CustomSnackbarContent(
+                        onTap: () {
+                          setState(() {
+                            _showSnackbar = false;
+                          });
+                        },
+                      ),
                     ),
                   ),
                 ),
+            ],
+          ),
+          bottomNavigationBar: BottomNavigationBar(
+            items: const <BottomNavigationBarItem>[
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home_outlined),
+                label: 'Bosh sahifa',
               ),
-          ],
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined),
-              label: 'Bosh sahifa',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.calculate_outlined),
-              label: 'Xarajatlar',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.sim_card_outlined),
-              label: 'Tariflar',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.square_favorites),
-              label: "Ko'ngilochar",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.account_balance_wallet_outlined),
-              label: 'Moliya',
-            ),
-          ],
-          currentIndex: _selectedIndex,
-          selectedItemColor: Colors.black,
-          unselectedItemColor: Colors.black.withOpacity(0.6),
-          selectedLabelStyle: TextStyle(fontSize: 12),
-          unselectedLabelStyle: TextStyle(fontSize: 12),
-          iconSize: 30,
-          showSelectedLabels: true,
-          showUnselectedLabels: true,
-          onTap: _onItemTapped,
+              BottomNavigationBarItem(
+                icon: Icon(Icons.calculate_outlined),
+                label: 'Xarajatlar',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.sim_card_outlined),
+                label: 'Tariflar',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(CupertinoIcons.square_favorites),
+                label: "Ko'ngilochar",
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.account_balance_wallet_outlined),
+                label: 'Moliya',
+              ),
+            ],
+            currentIndex: _selectedIndex,
+            selectedItemColor: Colors.black,
+            unselectedItemColor: Colors.black.withOpacity(0.6),
+            selectedLabelStyle: const TextStyle(fontSize: 12),
+            unselectedLabelStyle: const TextStyle(fontSize: 12),
+            iconSize: 30,
+            showSelectedLabels: true,
+            showUnselectedLabels: true,
+            onTap: _onItemTapped,
+          ),
         ),
       ),
     );

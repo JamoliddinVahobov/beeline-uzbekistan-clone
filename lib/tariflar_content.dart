@@ -1,8 +1,7 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_const_declarations
 import 'package:beeline_uzbekistan_clone/tariflar.dart';
 import 'package:flutter/material.dart';
 
-final TextStyle normalStyle =
+const TextStyle normalStyle =
     TextStyle(fontSize: 17, fontWeight: FontWeight.w500);
 
 class TariflarContent extends StatefulWidget {
@@ -18,8 +17,8 @@ class TariflarContentState extends State<TariflarContent> {
   void _scrollToPosition(int index) {
     final double height = MediaQuery.of(context).size.height;
     _scrollController.animateTo(
-      index * height * 0.7, // Adjust this multiplier as needed
-      duration: Duration(seconds: 1),
+      index * height * 0.7,
+      duration: const Duration(seconds: 1),
       curve: Curves.easeInOut,
     );
   }
@@ -56,14 +55,13 @@ class TariflarContentState extends State<TariflarContent> {
                             width: 250,
                             decoration: BoxDecoration(
                               color: Colors.lightGreen[500],
-                              borderRadius: BorderRadius.only(
+                              borderRadius: const BorderRadius.only(
                                 topRight: Radius.circular(7),
                                 bottomRight: Radius.circular(7),
                               ),
                             ),
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 20, top: 13.5),
+                            child: const Padding(
+                              padding: EdgeInsets.only(left: 20, top: 13.5),
                               child: Text(
                                 'KONSTRUKTOR',
                                 style: TextStyle(
@@ -75,8 +73,8 @@ class TariflarContentState extends State<TariflarContent> {
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 15, right: 5),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 15, right: 5),
                           child: Text(
                             'Qancha 🌍 gigabayt, 👏 daqiqa va ✉️ SMS kerakligini tanlang. Ortiqcha harajatlarsiz, faqat kerakli xizmatlar uchun to\'lang',
                             style: TextStyle(
@@ -91,17 +89,17 @@ class TariflarContentState extends State<TariflarContent> {
                             padding: const EdgeInsets.only(
                                 left: 15, right: 15, bottom: 15),
                             child: Container(
-                              padding: EdgeInsets.symmetric(vertical: 12),
+                              padding: const EdgeInsets.symmetric(vertical: 12),
                               alignment: Alignment.center,
                               decoration: BoxDecoration(
                                 color: Colors.amber[400],
                                 borderRadius: BorderRadius.circular(10),
-                                border: Border(
+                                border: const Border(
                                   bottom: BorderSide(
                                       color: Colors.orange, width: 5),
                                 ),
                               ),
-                              child: Center(
+                              child: const Center(
                                 child: Text("O'z tarifingizni yarating",
                                     style: normalStyle),
                               ),
@@ -123,12 +121,12 @@ class TariflarContentState extends State<TariflarContent> {
                       ),
                     ),
                   ),
-                  MultiPlus(),
-                  SizedBox(height: 10),
-                  MultiPro(),
-                  SizedBox(height: 10),
-                  MultiMax(),
-                  SizedBox(height: 10),
+                  const MultiPlus(),
+                  const SizedBox(height: 10),
+                  const MultiPro(),
+                  const SizedBox(height: 10),
+                  const MultiMax(),
+                  const SizedBox(height: 10),
                   Padding(
                     padding:
                         const EdgeInsets.only(left: 17, top: 17, bottom: 5),
@@ -141,11 +139,11 @@ class TariflarContentState extends State<TariflarContent> {
                       ),
                     ),
                   ),
-                  StatusSilver(),
-                  SizedBox(height: 10),
-                  StatusGold(),
-                  SizedBox(height: 10),
-                  StatusPlatinum(),
+                  const StatusSilver(),
+                  const SizedBox(height: 10),
+                  const StatusGold(),
+                  const SizedBox(height: 10),
+                  const StatusPlatinum(),
                   Padding(
                     padding:
                         const EdgeInsets.only(left: 17, top: 25, bottom: 5),
@@ -158,7 +156,7 @@ class TariflarContentState extends State<TariflarContent> {
                       ),
                     ),
                   ),
-                  BeelineSport(),
+                  const BeelineSport(),
                 ],
               ),
             ),
@@ -166,7 +164,7 @@ class TariflarContentState extends State<TariflarContent> {
         ),
         Container(
           height: 55,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               color: Colors.white,
               border: Border(top: BorderSide(color: Colors.black, width: 0.5))),
           child: SegmentedControl(onSegmentTapped: _scrollToPosition),
@@ -190,15 +188,18 @@ class SegmentedControlState extends State<SegmentedControl> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          _buildSegmentButton('Konstruktor', 0),
-          _buildSegmentButton('Multi kuch', 1),
-          _buildSegmentButton('Status', 4),
-          _buildSegmentButton('Boshqa tariflar', 9),
-        ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 7),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            _buildSegmentButton('Konstruktor', 0),
+            _buildSegmentButton('Multi kuch', 1),
+            _buildSegmentButton('Status', 4),
+            _buildSegmentButton('Boshqa tariflar', 9),
+          ],
+        ),
       ),
     );
   }
@@ -212,8 +213,8 @@ class SegmentedControlState extends State<SegmentedControl> {
               _selectedIndex == index ? Colors.amber : Colors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
-            side:
-                BorderSide(color: Colors.black, width: 0.2), // Add border here
+            side: const BorderSide(
+                color: Colors.black, width: 0.2), // Add border here
           ),
         ),
         onPressed: () {
@@ -222,7 +223,7 @@ class SegmentedControlState extends State<SegmentedControl> {
           });
           widget.onSegmentTapped(index);
         },
-        child: Text(label, style: TextStyle(color: Colors.black)),
+        child: Text(label, style: const TextStyle(color: Colors.black)),
       ),
     );
   }

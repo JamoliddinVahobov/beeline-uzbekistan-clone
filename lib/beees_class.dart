@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
 
 class Bees extends StatefulWidget {
@@ -10,9 +9,9 @@ class Bees extends StatefulWidget {
 
 class BeesState extends State<Bees> {
   final TextStyle headerStyle =
-      TextStyle(fontSize: 24, fontWeight: FontWeight.bold);
+      const TextStyle(fontSize: 24, fontWeight: FontWeight.bold);
   final TextStyle normalStyle =
-      TextStyle(fontSize: 17, fontWeight: FontWeight.w500);
+      const TextStyle(fontSize: 17, fontWeight: FontWeight.w500);
   final TextStyle opacityStyle = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w400,
@@ -37,7 +36,7 @@ class BeesState extends State<Bees> {
 
   Widget buildBeeMarketSection() {
     return Padding(
-      padding: const EdgeInsets.only(left: 12, top: 10, right: 10, bottom: 15),
+      padding: const EdgeInsets.only(left: 15, top: 10, right: 15, bottom: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -61,12 +60,12 @@ class BeesState extends State<Bees> {
           GestureDetector(
             onTap: () {},
             child: Container(
-              padding: EdgeInsets.symmetric(vertical: 12),
+              padding: const EdgeInsets.symmetric(vertical: 12),
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: Colors.amber[400],
                 borderRadius: BorderRadius.circular(10),
-                border: Border(
+                border: const Border(
                   bottom: BorderSide(color: Colors.orange, width: 5),
                 ),
               ),
@@ -80,7 +79,7 @@ class BeesState extends State<Bees> {
 
   Widget buildBeelineTVSection() {
     return Padding(
-      padding: const EdgeInsets.only(left: 12, top: 10, right: 10, bottom: 15),
+      padding: const EdgeInsets.only(left: 15, top: 10, right: 15, bottom: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -105,12 +104,12 @@ class BeesState extends State<Bees> {
           GestureDetector(
             onTap: () {},
             child: Container(
-              padding: EdgeInsets.symmetric(vertical: 12),
+              padding: const EdgeInsets.symmetric(vertical: 12),
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: Colors.amber[400],
                 borderRadius: BorderRadius.circular(10),
-                border: Border(
+                border: const Border(
                   bottom: BorderSide(color: Colors.orange, width: 5),
                 ),
               ),
@@ -124,7 +123,7 @@ class BeesState extends State<Bees> {
 
   Widget buildBeelineMusicSection() {
     return Padding(
-      padding: const EdgeInsets.only(left: 12, top: 10, right: 10, bottom: 15),
+      padding: const EdgeInsets.only(left: 15, top: 10, right: 15, bottom: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -152,12 +151,12 @@ class BeesState extends State<Bees> {
             child: Padding(
               padding: const EdgeInsets.only(left: 5, right: 5, top: 5),
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 12),
+                padding: const EdgeInsets.symmetric(vertical: 12),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: Colors.amber[400],
                   borderRadius: BorderRadius.circular(10),
-                  border: Border(
+                  border: const Border(
                     bottom: BorderSide(color: Colors.orange, width: 5),
                   ),
                 ),
@@ -172,7 +171,7 @@ class BeesState extends State<Bees> {
 
   Widget buildBeepulSection() {
     return Padding(
-      padding: const EdgeInsets.only(left: 12, top: 10, right: 10, bottom: 15),
+      padding: const EdgeInsets.only(left: 15, top: 10, right: 15, bottom: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -197,12 +196,12 @@ class BeesState extends State<Bees> {
           GestureDetector(
             onTap: () {},
             child: Container(
-              padding: EdgeInsets.symmetric(vertical: 12),
+              padding: const EdgeInsets.symmetric(vertical: 12),
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: Colors.amber[400],
                 borderRadius: BorderRadius.circular(10),
-                border: Border(
+                border: const Border(
                   bottom: BorderSide(color: Colors.orange, width: 5),
                 ),
               ),
@@ -216,7 +215,7 @@ class BeesState extends State<Bees> {
 
   Widget buildBipSection() {
     return Padding(
-      padding: const EdgeInsets.only(left: 12, top: 10, right: 10),
+      padding: const EdgeInsets.only(left: 15, top: 10, right: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -240,12 +239,12 @@ class BeesState extends State<Bees> {
           GestureDetector(
             onTap: () {},
             child: Container(
-              padding: EdgeInsets.symmetric(vertical: 12),
+              padding: const EdgeInsets.symmetric(vertical: 12),
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: Colors.amber[400],
                 borderRadius: BorderRadius.circular(10),
-                border: Border(
+                border: const Border(
                   bottom: BorderSide(color: Colors.orange, width: 5),
                 ),
               ),

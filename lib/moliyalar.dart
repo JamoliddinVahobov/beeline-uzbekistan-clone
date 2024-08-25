@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_const_declarations
 import 'package:flutter/material.dart';
 
 class Moliyalar extends StatefulWidget {
@@ -15,11 +14,11 @@ class _MoliyalarState extends State<Moliyalar> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: EdgeInsets.only(top: 50),
+        padding: const EdgeInsets.only(top: 50),
         child: Container(
           decoration: BoxDecoration(
               color: Colors.grey.shade300,
-              border: Border(
+              border: const Border(
                 top: BorderSide(color: Colors.black, width: 0.5),
               )),
           child: SingleChildScrollView(
@@ -40,7 +39,7 @@ class _MoliyalarState extends State<Moliyalar> {
                   child: Container(
                     height: 405,
                     width: double.maxFinite,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(30),
@@ -53,14 +52,14 @@ class _MoliyalarState extends State<Moliyalar> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             'PIN kodingizni kiriting',
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
                               fontSize: 20,
                             ),
                           ),
-                          SizedBox(height: 5),
+                          const SizedBox(height: 5),
                           Text(
                             'Beepul ilovasiga kirishni himoyalash uchun',
                             style: TextStyle(
@@ -68,7 +67,7 @@ class _MoliyalarState extends State<Moliyalar> {
                                 fontSize: 15,
                                 color: Colors.grey[700]),
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
                           Container(
                             height: 50,
                             width: 120,
@@ -85,16 +84,16 @@ class _MoliyalarState extends State<Moliyalar> {
                               obscureText: true,
                               textAlign: TextAlign.center,
                               keyboardType: TextInputType.number,
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                   hintText: "****", border: InputBorder.none),
                             ),
                           ),
-                          SizedBox(height: 5),
+                          const SizedBox(height: 5),
                           TextButton(
                             onPressed: () {
                               _showConfirmationDialog(context);
                             },
-                            child: Text(
+                            child: const Text(
                               "PIN-kodni unutdingizmi?",
                               style: TextStyle(
                                   fontWeight: FontWeight.w500,
@@ -125,7 +124,7 @@ void _showConfirmationDialog(BuildContext context) {
           borderRadius: BorderRadius.circular(20),
         ),
         child: Container(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -138,7 +137,7 @@ void _showConfirmationDialog(BuildContext context) {
                     backgroundColor: Colors.grey.shade400,
                     child: Center(
                       child: IconButton(
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.close,
                           size: 18,
                         ),
@@ -150,13 +149,13 @@ void _showConfirmationDialog(BuildContext context) {
                   ),
                 ),
               ),
-              Icon(
+              const Icon(
                 Icons.help_outline,
                 size: 60,
                 color: Colors.orange,
               ),
-              SizedBox(height: 16),
-              Text(
+              const SizedBox(height: 16),
+              const Text(
                 'Haqiqatan ham PIN-kodni qayta tiklamoqchimisiz?',
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -164,7 +163,7 @@ void _showConfirmationDialog(BuildContext context) {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.only(bottom: 10),
                 child: Row(
@@ -185,7 +184,7 @@ void _showConfirmationDialog(BuildContext context) {
                           ),
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Text(
+                        child: const Text(
                           "Yo'q",
                           style: TextStyle(color: Colors.black),
                         ),
@@ -203,7 +202,7 @@ void _showConfirmationDialog(BuildContext context) {
                           color: Colors.amber,
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Text(
+                        child: const Text(
                           "Ha",
                           style: TextStyle(color: Colors.black),
                         ),

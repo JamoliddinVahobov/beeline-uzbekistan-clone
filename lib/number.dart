@@ -8,12 +8,18 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Get the screen height using MediaQuery
+    double screenHeight = MediaQuery.of(context).size.height;
+
+    // Calculate flexible height based on screen size
+    double appBarHeight = screenHeight * 0.15; // 15% of the screen height
+
     return AppBar(
       backgroundColor: Colors.transparent,
       flexibleSpace: GestureDetector(
         onTap: onTap,
         child: Container(
-          padding: EdgeInsets.only(left: 8, right: 8, top: 35),
+          padding: EdgeInsets.only(left: 8, right: 8, top: appBarHeight * 0.15),
           child: Row(
             children: [
               Container(
@@ -21,9 +27,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 height: 50,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage(
-                      "assets/handy.jpg",
-                    ),
+                    image: AssetImage("assets/handy.jpg"),
                     fit: BoxFit.cover,
                   ),
                   shape: BoxShape.circle,
@@ -64,9 +68,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                width: 5,
-              ),
+              SizedBox(width: 5),
               Row(
                 children: [
                   IconButton(
@@ -91,7 +93,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight + 15);
+  Size get preferredSize =>
+      const Size.fromHeight(kToolbarHeight + 20); // Default height
 }
 
 class CustomSnackbarContent extends StatelessWidget {

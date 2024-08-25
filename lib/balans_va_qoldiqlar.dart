@@ -68,11 +68,12 @@ class _BalansAndTarifState extends State<BalansAndTarif> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 2, right: 2),
+            Expanded(
+              flex: 1,
               child: Container(
                 height: 150,
                 width: 150,
+                margin: EdgeInsets.only(left: 10),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   border: Border.all(width: 0.3, color: Colors.black),
@@ -109,32 +110,41 @@ class _BalansAndTarifState extends State<BalansAndTarif> {
                     ),
                     InkWell(
                       onTap: () {},
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                          left: 12,
-                          top: 5,
-                          bottom: 5,
-                        ),
-                        child: Container(
-                          height: 40,
-                          width: 125,
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                colors: [
-                                  Colors.black.withOpacity(0.7),
-                                  Colors.black,
-                                ]),
-                            borderRadius: BorderRadius.circular(30),
+                      child: Flexible(
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            left: 12,
+                            top: 5,
+                            bottom: 5,
                           ),
-                          child: Center(
-                            child: Text(
-                              "To'ldirish",
-                              style: TextStyle(
-                                fontSize: 17,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500,
+                          child: Container(
+                            height: 40,
+                            width: 125,
+                            margin: EdgeInsets.only(right: 10),
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                  colors: [
+                                    Colors.black.withOpacity(0.7),
+                                    Colors.black,
+                                  ]),
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            child: Center(
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 5),
+                                child: FittedBox(
+                                  child: Text(
+                                    "To'ldirish",
+                                    style: TextStyle(
+                                      fontSize: 17,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ),
                               ),
                             ),
                           ),
@@ -145,68 +155,75 @@ class _BalansAndTarifState extends State<BalansAndTarif> {
                 ),
               ),
             ),
-            Container(
-              height: 150,
-              width: 205,
-              decoration: BoxDecoration(
-                border: Border.all(width: 0.3, color: Colors.black),
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      left: 15,
-                      top: 12,
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Tarif',
-                          style: still,
-                        ),
-                        Text(
-                          "MULTI 2 (30%)",
-                          style: TextStyle(
-                            fontSize: 20,
+            Expanded(
+              flex: 2,
+              child: Container(
+                height: 150,
+                width: 205,
+                margin: EdgeInsets.only(left: 7, right: 15),
+                decoration: BoxDecoration(
+                  border: Border.all(width: 0.3, color: Colors.black),
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        left: 15,
+                        top: 12,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Tarif',
+                            style: still,
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 3, bottom: 3),
-                    child: Divider(
-                      color: Colors.black,
-                      thickness: 0.5,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      left: 15,
-                      // top: 12,
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Keyingi to'lov",
-                          style: still,
-                        ),
-                        Text(
-                          "26 avg, 35 000 so'm",
-                          style: TextStyle(
-                            fontSize: 19,
-                            fontWeight: FontWeight.w500,
+                          Text(
+                            "MULTI 2 (30%)",
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  )
-                ],
+                    Padding(
+                      padding: const EdgeInsets.only(top: 3, bottom: 3),
+                      child: Divider(
+                        color: Colors.black,
+                        thickness: 0.5,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        left: 15,
+                        // top: 12,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Keyingi to'lov",
+                            style: still,
+                          ),
+                          FittedBox(
+                            fit: BoxFit.scaleDown,
+                            child: Text(
+                              "26 avg, 35 000 so'm",
+                              style: TextStyle(
+                                fontSize: 19,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
             SizedBox(
@@ -219,60 +236,62 @@ class _BalansAndTarifState extends State<BalansAndTarif> {
         ),
         Padding(
           padding: const EdgeInsets.only(right: 5),
-          child: Container(
-            height: 155,
-            width: 365,
-            decoration: BoxDecoration(
-              border: Border.all(width: 0.3, color: Colors.black),
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(
-                    left: 20,
-                    top: 15,
-                  ),
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: info
-                          .map((information) => design(information))
-                          .toList(),
+          child: Expanded(
+            child: Container(
+              height: 155,
+              margin: EdgeInsets.symmetric(horizontal: 10),
+              decoration: BoxDecoration(
+                border: Border.all(width: 0.3, color: Colors.black),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 20,
+                      top: 15,
+                    ),
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: info
+                            .map((information) => design(information))
+                            .toList(),
+                      ),
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 5, bottom: 4),
-                  child: Divider(
-                    color: Colors.black,
-                    thickness: 0.5,
+                  Padding(
+                    padding: const EdgeInsets.only(top: 5, bottom: 4),
+                    child: Divider(
+                      color: Colors.black,
+                      thickness: 0.5,
+                    ),
                   ),
-                ),
-                InkWell(
-                  onTap: () {},
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Barcha qoldiqlarni ko'rish",
-                        style: still,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Icon(
-                        Icons.arrow_forward_ios,
-                        size: 15,
-                        color: Colors.black.withOpacity(0.6),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+                  InkWell(
+                    onTap: () {},
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Barcha qoldiqlarni ko'rish",
+                          style: still,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          size: 15,
+                          color: Colors.black.withOpacity(0.6),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ),

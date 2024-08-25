@@ -28,53 +28,56 @@ class PromotionsState extends State<Promotions> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        SizedBox(
-          width: 10,
-        ),
-        Expanded(
-          child: SizedBox(
-            height: 150,
-            width: double.infinity,
-            child: CarouselSlider(
-              items: promotionUrls
-                  .map(
-                    (url) => Padding(
-                      padding: const EdgeInsets.only(right: 8),
-                      child: Container(
-                        height: 120,
-                        width: 120,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Colors.blue.shade700,
-                            width: 3,
-                          ),
-                          image: DecorationImage(
-                            image: AssetImage(
-                              url,
+    return Padding(
+      padding: const EdgeInsets.only(top: 75),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 10,
+          ),
+          Expanded(
+            child: SizedBox(
+              height: 150,
+              width: double.infinity,
+              child: CarouselSlider(
+                items: promotionUrls
+                    .map(
+                      (url) => Padding(
+                        padding: const EdgeInsets.only(right: 8),
+                        child: Container(
+                          height: 120,
+                          width: 120,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Colors.blue.shade700,
+                              width: 3,
                             ),
-                            fit: BoxFit.cover,
+                            image: DecorationImage(
+                              image: AssetImage(
+                                url,
+                              ),
+                              fit: BoxFit.cover,
+                            ),
+                            borderRadius: BorderRadius.circular(20),
                           ),
-                          borderRadius: BorderRadius.circular(20),
                         ),
                       ),
-                    ),
-                  )
-                  .toList(),
-              options: CarouselOptions(
-                padEnds: false,
-                pauseAutoPlayOnTouch: true,
-                pageSnapping: false,
-                enableInfiniteScroll: false,
-                viewportFraction: 0.3,
-                autoPlay: true,
-                autoPlayInterval: Duration(seconds: 5),
+                    )
+                    .toList(),
+                options: CarouselOptions(
+                  padEnds: false,
+                  pauseAutoPlayOnTouch: true,
+                  pageSnapping: false,
+                  enableInfiniteScroll: false,
+                  viewportFraction: 0.3,
+                  autoPlay: true,
+                  autoPlayInterval: Duration(seconds: 5),
+                ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              height: 530,
+              height: 600,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [

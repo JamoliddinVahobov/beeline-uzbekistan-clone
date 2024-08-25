@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
+import 'package:glass/glass.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final VoidCallback onTap;
@@ -11,11 +12,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     // Get the screen height using MediaQuery
     double screenHeight = MediaQuery.of(context).size.height;
 
-    // Calculate flexible height based on screen size
-    double appBarHeight = screenHeight * 0.15; // 15% of the screen height
+    double appBarHeight = screenHeight * 0.15;
 
     return AppBar(
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.white.withOpacity(0.6),
       flexibleSpace: GestureDetector(
         onTap: onTap,
         child: Container(
@@ -89,6 +89,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
         ),
       ),
+    ).asGlass(
+      blurX: 8,
+      blurY: 8,
     );
   }
 

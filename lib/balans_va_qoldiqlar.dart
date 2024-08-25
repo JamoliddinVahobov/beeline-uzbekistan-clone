@@ -69,7 +69,7 @@ class _BalansAndTarifState extends State<BalansAndTarif> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Expanded(
-              flex: 1,
+              flex: 2,
               child: Container(
                 height: 150,
                 width: 150,
@@ -110,39 +110,37 @@ class _BalansAndTarifState extends State<BalansAndTarif> {
                     ),
                     InkWell(
                       onTap: () {},
-                      child: Flexible(
-                        child: Padding(
-                          padding: const EdgeInsets.only(
-                            left: 12,
-                            top: 5,
-                            bottom: 5,
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                          left: 13,
+                          top: 5,
+                          bottom: 5,
+                        ),
+                        child: Container(
+                          height: 37,
+                          width: 120,
+                          margin: EdgeInsets.only(right: 10),
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Colors.black.withOpacity(0.7),
+                                  Colors.black,
+                                ]),
+                            borderRadius: BorderRadius.circular(30),
                           ),
-                          child: Container(
-                            height: 40,
-                            width: 125,
-                            margin: EdgeInsets.only(right: 10),
-                            decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                    Colors.black.withOpacity(0.7),
-                                    Colors.black,
-                                  ]),
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                            child: Center(
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 5),
-                                child: FittedBox(
-                                  child: Text(
-                                    "To'ldirish",
-                                    style: TextStyle(
-                                      fontSize: 17,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w500,
-                                    ),
+                          child: Center(
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 5),
+                              child: FittedBox(
+                                child: Text(
+                                  "To'ldirish",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                               ),
@@ -156,7 +154,7 @@ class _BalansAndTarifState extends State<BalansAndTarif> {
               ),
             ),
             Expanded(
-              flex: 2,
+              flex: 3,
               child: Container(
                 height: 150,
                 width: 205,
@@ -236,65 +234,122 @@ class _BalansAndTarifState extends State<BalansAndTarif> {
         ),
         Padding(
           padding: const EdgeInsets.only(right: 5),
-          child: Expanded(
-            child: Container(
-              height: 155,
-              margin: EdgeInsets.symmetric(horizontal: 10),
-              decoration: BoxDecoration(
-                border: Border.all(width: 0.3, color: Colors.black),
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      left: 20,
-                      top: 15,
-                    ),
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: info
-                            .map((information) => design(information))
-                            .toList(),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 5, bottom: 4),
-                    child: Divider(
-                      color: Colors.black,
-                      thickness: 0.5,
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {},
+          child: Container(
+            height: 155,
+            margin: EdgeInsets.symmetric(horizontal: 10),
+            decoration: BoxDecoration(
+              border: Border.all(width: 0.3, color: Colors.black),
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 20, top: 15),
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Barcha qoldiqlarni ko'rish",
-                          style: still,
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Icon(
-                          Icons.arrow_forward_ios,
-                          size: 15,
-                          color: Colors.black.withOpacity(0.6),
-                        ),
-                      ],
+                      children: info
+                          .map((information) => design(information))
+                          .toList(),
                     ),
-                  )
-                ],
-              ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 5, bottom: 4),
+                  child: Divider(
+                    color: Colors.black,
+                    thickness: 0.5,
+                  ),
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Barcha qoldiqlarni ko'rish",
+                        style: still,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Icon(
+                        Icons.arrow_forward_ios,
+                        size: 15,
+                        color: Colors.black.withOpacity(0.6),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
         ),
+
+        // Padding(
+        //   padding: const EdgeInsets.only(right: 5),
+        //   child: Expanded(
+        //     child: Container(
+        //       height: 155,
+        //       margin: EdgeInsets.symmetric(horizontal: 10),
+        //       decoration: BoxDecoration(
+        //         border: Border.all(width: 0.3, color: Colors.black),
+        //         color: Colors.white,
+        //         borderRadius: BorderRadius.circular(20),
+        //       ),
+        //       child: Column(
+        //         crossAxisAlignment: CrossAxisAlignment.start,
+        //         children: [
+        //           Padding(
+        //             padding: const EdgeInsets.only(
+        //               left: 20,
+        //               top: 15,
+        //             ),
+        //             child: SingleChildScrollView(
+        //               scrollDirection: Axis.horizontal,
+        //               child: Row(
+        //                 children: info
+        //                     .map((information) => design(information))
+        //                     .toList(),
+        //               ),
+        //             ),
+        //           ),
+        //           Padding(
+        //             padding: const EdgeInsets.only(top: 5, bottom: 4),
+        //             child: Divider(
+        //               color: Colors.black,
+        //               thickness: 0.5,
+        //             ),
+        //           ),
+        //           InkWell(
+        //             onTap: () {},
+        //             child: Row(
+        //               mainAxisAlignment: MainAxisAlignment.center,
+        //               crossAxisAlignment: CrossAxisAlignment.center,
+        //               children: [
+        //                 Text(
+        //                   "Barcha qoldiqlarni ko'rish",
+        //                   style: still,
+        //                 ),
+        //                 SizedBox(
+        //                   width: 5,
+        //                 ),
+        //                 Icon(
+        //                   Icons.arrow_forward_ios,
+        //                   size: 15,
+        //                   color: Colors.black.withOpacity(0.6),
+        //                 ),
+        //               ],
+        //             ),
+        //           )
+        //         ],
+        //       ),
+        //     ),
+        //   ),
+        // ),
       ],
     );
   }

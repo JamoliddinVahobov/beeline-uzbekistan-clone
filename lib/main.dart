@@ -78,75 +78,78 @@ class _BeelineState extends State<Beeline> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: _selectedIndex == 0
-          ? CustomAppBar(
-              onTap: _toggleSnackbar,
-            )
-          : null,
-      body: Stack(
-        children: [
-          IndexedStack(
-            index: _selectedIndex,
-            children: [
-              HomeScreen(onSnackbarTap: _toggleSnackbar),
-              Xarajatlar(),
-              Tariflar(),
-              Kongilochar(),
-              Moliyalar(),
-            ],
-          ),
-          if (_showSnackbar)
-            GestureDetector(
-              onTap: _toggleSnackbar,
-              child: Container(
-                color: Colors.black.withOpacity(0.5),
-                child: Align(
-                  alignment: Alignment.bottomCenter,
-                  child: CustomSnackbarContent(
-                    onTap: () {
-                      setState(() {
-                        _showSnackbar = false;
-                      });
-                    },
+    return SafeArea(
+      child: Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: _selectedIndex == 0
+            ? CustomAppBar(
+                onTap: _toggleSnackbar,
+              )
+            : null,
+        body: Stack(
+          children: [
+            IndexedStack(
+              index: _selectedIndex,
+              children: [
+                HomeScreen(onSnackbarTap: _toggleSnackbar),
+                Xarajatlar(),
+                Tariflar(),
+                Kongilochar(),
+                Moliyalar(),
+              ],
+            ),
+            if (_showSnackbar)
+              GestureDetector(
+                onTap: _toggleSnackbar,
+                child: Container(
+                  color: Colors.black.withOpacity(0.5),
+                  child: Align(
+                    alignment: Alignment.bottomCenter,
+                    child: CustomSnackbarContent(
+                      onTap: () {
+                        setState(() {
+                          _showSnackbar = false;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
+          ],
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home_outlined),
+              label: 'Bosh sahifa',
             ),
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            label: 'Bosh sahifa',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.calculate_outlined),
-            label: 'Xarajatlar',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.sim_card_outlined),
-            label: 'Tariflar',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.square_favorites),
-            label: "Ko'ngilochar",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_balance_wallet_outlined),
-            label: 'Moliya',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.black.withOpacity(0.6),
-        selectedLabelStyle: TextStyle(fontSize: 12),
-        unselectedLabelStyle: TextStyle(fontSize: 12),
-        iconSize: 30,
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-        onTap: _onItemTapped,
+            BottomNavigationBarItem(
+              icon: Icon(Icons.calculate_outlined),
+              label: 'Xarajatlar',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.sim_card_outlined),
+              label: 'Tariflar',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.square_favorites),
+              label: "Ko'ngilochar",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_balance_wallet_outlined),
+              label: 'Moliya',
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.black,
+          unselectedItemColor: Colors.black.withOpacity(0.6),
+          selectedLabelStyle: TextStyle(fontSize: 12),
+          unselectedLabelStyle: TextStyle(fontSize: 12),
+          iconSize: 30,
+          showSelectedLabels: true,
+          showUnselectedLabels: true,
+          onTap: _onItemTapped,
+        ),
       ),
     );
   }

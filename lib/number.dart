@@ -46,7 +46,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     Row(
                       children: [
                         Text(
-                          'yuklanmoqda...',
+                          'Jamoliddin',
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
@@ -159,7 +159,7 @@ class CustomSnackbarContent extends StatelessWidget {
                             Row(
                               children: [
                                 Text(
-                                  'yuklanmoqda...',
+                                  'Jamoliddin',
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.w500,
